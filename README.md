@@ -5,7 +5,7 @@ Airbnb-based, but a little bit modified ESlint config.
 ## Installation
 
 ```
-yarn add --dev @octetstream/eslint-config
+yarn add --dev @octetstream/eslint-config eslint@3.19.x
 ```
 
 ## Usage
