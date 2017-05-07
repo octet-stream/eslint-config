@@ -1,0 +1,23 @@
+{
+  "name": "@octetstream/eslint-config",
+  "version": "1.0.0",
+  "description": "Airbnb-based, but a little bit modified ESlint config.",
+  "main": "main.js",
+  "author": "Nick K.",
+  "license": "MIT",
+  "repository": "git@github.com:octet-stream/eslint-config.git",
+  "dependencies": {
+    "babel-eslint": "7.1.1",
+    "eslint-config-airbnb": "14.1.0",
+    "eslint-config-standard-react": "4.2.0",
+    "eslint-plugin-import": "2.2.0",
+    "eslint-plugin-jsx-a11y": "4.0.0",
+    "eslint-plugin-react": "6.9.0"
+  },
+  "devDependencies": {
+    "eslint": "3.19.x"
+  },
+  "peerDependencies": {
+    "eslint": "3.19.x"
+  }
+}
