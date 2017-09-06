@@ -52,7 +52,6 @@
       "destructuring": "any",
       "ignoreReadBeforeAssign": false
    }],
-   "space-before-function-paren": ["error", "never"],
    "no-restricted-syntax": ["error", "WithStatement"],
    "no-unused-expressions": ["error", {
       "allowShortCircuit": true,
@@ -74,6 +73,22 @@
    "func-names": 0,
    "global-require": 0,
    "no-void": 0,
+
+   "function-paren-newline": ["error", "consistent"],
+   "space-before-function-paren": ["error", {
+     "asyncArrow": "always",
+     "named": "never",
+     "anonymous": "never"
+   }],
+   "prefer-destructuring": ["error", {
+     "array": false,
+     "object": false
+   }, {
+     "enforceForRenamedProperties": false
+   }],
+   "object-curly-newline": ["error", {
+     "consistent": true
+   }],
 
    "import/no-extraneous-dependencies": 0,
    "import/no-named-as-default-member": 0,
