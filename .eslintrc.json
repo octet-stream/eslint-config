@@ -7,14 +7,8 @@
   "parser": "babel-eslint",
   "parserOptions": {
     "sourceType": "module",
-    "allowImportExportEverywhere": false,
-    "ecmaFeatures": {
-      "jsx": true
-    }
+    "allowImportExportEverywhere": false
   },
-  "plugins": [
-    "react"
-  ],
   "extends": [
     "airbnb-base"
   ],
