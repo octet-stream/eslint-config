@@ -9,6 +9,9 @@
     "sourceType": "module",
     "allowImportExportEverywhere": false
   },
+  "plugins": [
+    "promise"
+  ],
   "extends": [
     "airbnb-base"
   ],
