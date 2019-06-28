@@ -2,7 +2,7 @@
   "name": "@octetstream/eslint-config",
   "version": "3.1.0",
   "description": "Airbnb-based, but a little bit modified ESlint config.",
-  "main": "main.js",
+  "main": "main",
   "author": "Nick K.",
   "license": "MIT",
   "repository": "octet-stream/eslint-config",
