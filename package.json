@@ -7,9 +7,9 @@
   "license": "MIT",
   "repository": "octet-stream/eslint-config",
   "dependencies": {
-    "babel-eslint": "10.0.2",
-    "eslint-config-airbnb-base": "13.1.0",
-    "eslint-plugin-import": "2.18.0",
+    "babel-eslint": "10.0.3",
+    "eslint-config-airbnb-base": "14.0.0",
+    "eslint-plugin-import": "2.18.2",
     "eslint-plugin-promise": "4.2.1"
   },
   "devDependencies": {
