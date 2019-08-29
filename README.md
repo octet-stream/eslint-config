@@ -1,6 +1,6 @@
 # @octetstream/eslint-config
 
-Airbnb-based, but a little bit modified ESlint config.
+Airbnb-based ESlint config.
 
 ## Installation
 
