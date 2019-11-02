@@ -13,7 +13,7 @@
     "eslint-plugin-promise": "4.2.1"
   },
   "devDependencies": {
-    "eslint": "^6.0.x"
+    "eslint": "^6.6.0"
   },
   "peerDependencies": {
     "eslint": "^5.4.x || ^6.0.x"
