@@ -79,13 +79,7 @@ module.exports = {
     "space-before-function-paren": ["error", {
       asyncArrow: "always",
       named: "never",
-      anonymous: "never"
-    }],
-    "prefer-destructuring": ["error", {
-      array: false,
-      object: false
-    }, {
-      enforceForRenamedProperties: false
+      anonymous: "always"
     }],
     "object-curly-newline": ["error", {
       consistent: true
