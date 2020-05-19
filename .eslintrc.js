@@ -22,11 +22,10 @@ module.exports = {
     indent: ["error", 2, {
       SwitchCase: 1
     }],
-    "max-len": [
-      "error", {
-        code: 80
-      }
-    ],
+    "max-len": ["error", {
+      code: 80,
+      ignoreComments: true
+    }],
     "linebreak-style": ["error", "unix"],
     "eol-last": ["error", "unix"],
     "require-yield": 0,
