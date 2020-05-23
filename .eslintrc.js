@@ -26,6 +26,9 @@ module.exports = {
       code: 80,
       ignoreComments: true
     }],
+    "prefer-const": ["error", {
+      destructuring: "all"
+    }],
     "linebreak-style": ["error", "unix"],
     "eol-last": ["error", "unix"],
     "require-yield": 0,
@@ -49,10 +52,6 @@ module.exports = {
     "object-curly-spacing": ["error", "never"],
     "array-bracket-spacing": ["error", "never"],
     "arrow-parens": ["error", "as-needed"],
-    "prefer-const": ["error", {
-      destructuring: "any",
-      ignoreReadBeforeAssign: false
-    }],
     "no-restricted-syntax": ["error", "WithStatement"],
     "no-unused-expressions": ["error", {
       allowShortCircuit: true,
