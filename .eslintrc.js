@@ -31,6 +31,7 @@ module.exports = {
     }],
     "linebreak-style": ["error", "unix"],
     "eol-last": ["error", "unix"],
+    "operator-linebreak": ["error", "before"],
     "require-yield": 0,
     "no-unused-vars": ["warn"],
     "no-console": 0,
