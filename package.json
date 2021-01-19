@@ -8,14 +8,14 @@
   "repository": "octet-stream/eslint-config",
   "dependencies": {
     "babel-eslint": "10.1.0",
-    "eslint-config-airbnb-base": "14.1.0",
-    "eslint-plugin-import": "2.20.2",
-    "eslint-plugin-promise": "4.2.1"
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-promise": "^4.2.1"
   },
   "devDependencies": {
-    "eslint": "^7.0.0"
+    "eslint": "^7.18.0"
   },
   "peerDependencies": {
-    "eslint": "^5.4.x || ^6.0.x"
+    "eslint": "^5.16.0 || ^6.8.0 || ^7.2.0"
   }
 }
