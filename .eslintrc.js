@@ -4,10 +4,6 @@ module.exports = {
     node: true,
     browser: true
   },
-  parserOptions: {
-    sourceType: "module",
-    allowImportExportEverywhere: false
-  },
   plugins: [
     "promise"
   ],
@@ -18,39 +14,21 @@ module.exports = {
     camelcase: ["error"],
     semi: ["error", "never"],
     quotes: ["error", "double"],
-    indent: ["error", 2, {
-      SwitchCase: 1
-    }],
     "max-len": ["error", {
       code: 80,
-      ignoreComments: true
+      ignoreRegExpLiterals: true,
+      ignoreComments: true,
+      ignoreUrls: true
     }],
     "prefer-const": ["error", {
       destructuring: "all"
     }],
-    "linebreak-style": ["error", "unix"],
-    "eol-last": ["error", "unix"],
     "operator-linebreak": ["error", "before"],
-    "require-yield": 0,
     "no-unused-vars": ["warn"],
+    "require-yield": 0,
     "no-console": 0,
-    "no-multi-spaces": ["error"],
-    "guard-for-in": ["error"],
-    "no-empty": ["error"],
-    "no-global-assign": ["error"],
-    "no-eval": ["error"],
-    "no-throw-literal": ["error"],
-    yoda: ["error"],
-    "no-with": ["error"],
-    "no-new-require": ["error"],
-    "no-tabs": ["error"],
     "no-trailing-spaces": ["error"],
-    "no-inner-declarations": 0,
-    "no-class-assign": 0,
-    "no-unsafe-finally": ["error"],
-    "yield-star-spacing": ["error", "after"],
     "object-curly-spacing": ["error", "never"],
-    "array-bracket-spacing": ["error", "never"],
     "arrow-parens": ["error", "as-needed"],
     "no-restricted-syntax": ["error", "WithStatement"],
     "no-unused-expressions": ["error", {
@@ -73,20 +51,18 @@ module.exports = {
     "no-void": 0,
 
     "func-names": ["error", "as-needed"],
-    "function-paren-newline": ["error", "consistent"],
-    "space-before-function-paren": ["error", {
-      asyncArrow: "always",
-      named: "never",
-      anonymous: "always"
-    }],
     "object-curly-newline": ["error", {
       consistent: true
     }],
 
-    "import/no-extraneous-dependencies": 0,
     "import/no-named-as-default-member": 0,
     "import/no-dynamic-require": 0,
+
+    // Ensure consistent use of file extension within the import path
+    // TODO: Enable for .js when migrating to ESM
+    // TODO: I should probably make a separate entry point for ESM-sepcific rules...
     "import/extensions": 0,
+
     "import/prefer-default-export": 0
   }
 }
