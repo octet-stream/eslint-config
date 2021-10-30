@@ -55,6 +55,7 @@ const thirdString = 'This string also contains "quotes" in it.'
 const fourthString = `Use template literal only if you need ${interpolation}.`
 
 // Bad 👎
+
 const fifthString = 'Do not use signle quotes for strings.'
 const sixthString = `Do not use template literal without interpolation.`
 ```
@@ -69,4 +70,8 @@ const number = 42
 let string = "Initial string value"
 
 string = "Updated string value"
+
+// Bad 👎
+
+var someVariable = 451
 ```
