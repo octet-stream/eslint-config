@@ -31,7 +31,7 @@ This section contains the list of rules that I changed comparad to AirBnb config
 
 const string = "On Soviet Moon landscape see binoculars through you!"
 
-const doSomething = () => {}; // Good
+const doSomething = () => {}; // Good, because the next expression starts with an array declaration, but does not have an assignment
 
 ["SIGTERM", "SIGINT"].forEach(signal => process.on(signal, () => { process.exitCode = 0 }))
 
