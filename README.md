@@ -60,7 +60,7 @@ const fifthString = 'Do not use signle quotes for strings.'
 const sixthString = `Do not use template literal without interpolation.`
 ```
 
-3. Prefer `const` over `let` if assigned value is not meant to be changed. Avoid `var`. [`prefer-const`](https://eslint.org/docs/rules/prefer-const)
+3. Prefer `const` over `let` if assigned value is not meant to be changed. Avoid `var`. Use `const` in destructuring only if none of values are meant to be changed. [`prefer-const`](https://eslint.org/docs/rules/prefer-const)
 
 ```js
 // Good 👍
