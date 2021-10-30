@@ -24,7 +24,7 @@ Create an `.eslintrc.json` at the root of your project and add the following con
 
 This section contains the list of rules that I changed comparad to AirBnb config.
 
-1. Never use the semicolon, until it's necessary: [`semi`](https://eslint.org/docs/rules/semi#require-or-disallow-semicolons-instead-of-asi-semi)
+1. Never use the semicolon, until it's necessary: [`semi`](https://eslint.org/docs/rules/semi)
 
 ```js
 // Good 👍
@@ -42,4 +42,31 @@ const person = {
   firstName: "Luke",
   lastName: "Skywalker"
 };
+```
+
+2. Use double quotes by default. [`quotes`](https://eslint.org/docs/rules/quotes)
+
+```js
+// Good 👍
+
+const firstString = "Just a string with double quotes."
+const secondString = "This string contains \"escaped quotes\" in it."
+const thirdString = 'This string also contains "quotes" in it.'
+const fourthString = `Use template literal only if you need ${interpolation}.`
+
+// Bad 👎
+const fifthString = 'Do not use signle quotes for strings.'
+const sixthString = `Do not use template literal without interpolation.`
+```
+
+3. Prefer `const` over `let` if assigned value is not meant to be changed. Avoid `var`. [`prefer-const`](https://eslint.org/docs/rules/prefer-const)
+
+```js
+// Good 👍
+
+const number = 42
+
+let string = "Initial string value"
+
+string = "Updated string value"
 ```
