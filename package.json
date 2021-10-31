@@ -4,6 +4,7 @@
   "description": "AirBnb-based ESlint config, tweaked for my needs.",
   "author": "Nick K.",
   "license": "MIT",
+  "type": "commonjs",
   "main": ".eslintrc.js",
   "exports": {
     ".": "./eslint.js",
