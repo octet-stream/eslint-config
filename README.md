@@ -5,7 +5,7 @@ AirBnb-based ESlint config, tweaked for my needs.
 ## Installation
 
 ```
-pnpm add --dev @octetstream/eslint-config eslint
+pnpm add -D @octetstream/eslint-config eslint
 ```
 
 ## Usage
