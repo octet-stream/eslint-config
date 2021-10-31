@@ -2,9 +2,13 @@
   "name": "@octetstream/eslint-config",
   "version": "5.0.0",
   "description": "Airbnb-based, but a little bit modified ESlint config.",
-  "main": ".eslintrc.js",
   "author": "Nick K.",
   "license": "MIT",
+  "main": ".eslintrc.js",
+  "exports": {
+    ".": "./eslint.js",
+    "./package.json": "./package.json"
+  },
   "repository": "octet-stream/eslint-config",
   "dependencies": {
     "eslint-config-airbnb-base": "^14.2.1",
