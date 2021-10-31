@@ -1,7 +1,7 @@
 {
   "name": "@octetstream/eslint-config",
   "version": "5.0.0",
-  "description": "Airbnb-based, but a little bit modified ESlint config.",
+  "description": "AirBnb-based ESlint config, tweaked for my needs.",
   "author": "Nick K.",
   "license": "MIT",
   "main": ".eslintrc.js",
