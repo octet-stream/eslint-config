@@ -1,13 +1,13 @@
 {
   "name": "@octetstream/eslint-config",
-  "version": "6.0.0",
+  "version": "6.0.1",
   "description": "AirBnb-based ESlint config, tweaked for my needs.",
   "author": "Nick K.",
   "license": "MIT",
   "type": "commonjs",
   "main": ".eslintrc.js",
   "exports": {
-    ".": "./eslint.js",
+    ".": "./eslintrc.js",
     "./package.json": "./package.json"
   },
   "repository": "octet-stream/eslint-config",
