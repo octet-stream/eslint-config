@@ -4,10 +4,11 @@
   "description": "AirBnb-based ESlint config, tweaked for my needs.",
   "author": "Nick K.",
   "license": "MIT",
-  "type": "commonjs",
-  "main": ".eslintrc.js",
+  "main": "./base.js",
   "exports": {
-    ".": "./.eslintrc.js",
+    ".": "./base.js",
+    "./esm": "./esm.js",
+    "./typescript": "./typescript.js",
     "./package.json": "./package.json"
   },
   "repository": "octet-stream/eslint-config",
@@ -16,10 +17,10 @@
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-promise": "^6.0.0"
   },
-  "devDependencies": {
-    "eslint": "^8.17.0"
-  },
   "peerDependencies": {
-    "eslint": "^8.0.0"
+    "eslint": "^8.0.0",
+    "@typescript-eslint/eslint-plugin": "^5.27.1",
+    "@typescript-eslint/parser": "^5.27.1",
+    "eslint-config-airbnb-typescript": "^17.0.0"
   }
 }

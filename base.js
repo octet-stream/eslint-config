@@ -7,7 +7,8 @@ module.exports = {
     "promise"
   ],
   extends: [
-    "airbnb-base"
+    "airbnb-base",
+    "plugin:promise/recommended"
   ],
   rules: {
     camelcase: ["error"],
@@ -48,7 +49,6 @@ module.exports = {
     "consistent-return": 0,
     "global-require": 0,
     "no-void": 0,
-
     "func-names": ["error", "as-needed"],
     "object-curly-newline": ["error", {
       consistent: true
@@ -56,12 +56,7 @@ module.exports = {
 
     "import/no-named-as-default-member": 0,
     "import/no-dynamic-require": 0,
-
-    // Ensure consistent use of file extension within the import path
-    // TODO: Enable for .js when migrating to ESM
-    // TODO: I should probably make a separate entry point for ESM-sepcific rules...
     "import/extensions": 0,
-
     "import/prefer-default-export": 0
   }
 }
