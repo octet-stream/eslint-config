@@ -27,6 +27,7 @@ module.exports = {
     "no-unused-vars": ["warn"],
     "require-yield": 0,
     "no-console": 0,
+    "no-plusplus": 0,
     "no-trailing-spaces": ["error"],
     "object-curly-spacing": ["error", "never"],
     "arrow-parens": ["error", "as-needed"],
@@ -57,7 +58,15 @@ module.exports = {
     "import/no-named-as-default-member": 0,
     "import/no-dynamic-require": 0,
     "import/prefer-default-export": 0,
+    "import/no-extraneous-dependencies": ["error", {
+      "devDependencies": [
+        "**/*.test.{js,cjs,mjs,jsx}",
+        "**/__helper__/**/*.{js,cjs,mjs,jsx}",
+        "**/__fixture__/**/*.{js,cjs,mjs,jsx}",
+        "**/__macro__/**/*.{js,cjs,mjs,jsx}"
+      ]
+    }],
 
-    "react/jsx-filename-extension": 0
+    "react/jsx-filename-extension": 0,
   }
 }

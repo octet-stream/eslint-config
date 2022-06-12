@@ -1,1 +1,1 @@
-module.exports = require("./esm.js")
+module.exports = require("./esm")
