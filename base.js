@@ -56,7 +56,8 @@ module.exports = {
 
     "import/no-named-as-default-member": 0,
     "import/no-dynamic-require": 0,
-    "import/extensions": 0,
-    "import/prefer-default-export": 0
+    "import/prefer-default-export": 0,
+
+    "react/jsx-filename-extension": 0
   }
 }
