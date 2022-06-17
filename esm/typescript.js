@@ -5,7 +5,7 @@ module.exports = {
   },
   rules: {
     // import plugin expects .ts extension for some reason
-    // so I forbid extensions this rule for .ts, .tsx
+    // so I disable this rule for .ts, .tsx extensions
     "import/extensions": ["error", "ignorePackages", {ts: "never", tsx: "never"}],
     "import/no-extraneous-dependencies": ["error", {
       "devDependencies": [
