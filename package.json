@@ -7,9 +7,13 @@
   "main": "./base.js",
   "exports": {
     ".": "./base.js",
+    "./react": "./react.js",
+    "./typescript": "./typescript/typescript.js",
+    "./typescript/react": "./typescript/react.js",
     "./esm": "./esm/esm.js",
-    "./esm/typescript": "./esm/typescript.js",
-    "./typescript": "./typescript.js",
+    "./esm/react": "./esm/react.js",
+    "./esm/typescript": "./esm/typescript/typescript.js",
+    "./esm/typescript/react": "./esm/typescript/react.js",
     "./package.json": "./package.json"
   },
   "repository": "octet-stream/eslint-config",
