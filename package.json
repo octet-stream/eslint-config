@@ -1,6 +1,6 @@
 {
   "name": "@octetstream/eslint-config",
-  "version": "6.2.2",
+  "version": "7.0.0",
   "description": "AirBnb-based ESlint config, tweaked for my needs.",
   "author": "Nick K.",
   "license": "MIT",
@@ -13,6 +13,20 @@
     "./package.json": "./package.json"
   },
   "repository": "octet-stream/eslint-config",
+  "pnpm": {
+    "peerDependencyRules": {
+      "ignoreMissing": [
+        "@typescript-eslint/eslint-plugin",
+        "@typescript-eslint/parser",
+        "eslint-config-airbnb-typescript",
+        "eslint-import-resolver-typescript",
+        "eslint-plugin-jsx-a11y",
+        "eslint-plugin-react",
+        "eslint-plugin-react-hooks",
+        "typescript"
+      ]
+    }
+  },
   "dependencies": {
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.27.5",

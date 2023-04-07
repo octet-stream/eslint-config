@@ -4,15 +4,29 @@ AirBnb-based ESlint config, tweaked for my needs.
 
 ## Installation
 
+For basic usage you only need two dependencies:
+
+```bash
+pnpm add -D eslint @octetstream/eslint-config
 ```
-pnpm add -D @octetstream/eslint-config eslint
+
+TypeScript configuration requires path to `tsconfig.json` and following dependencies: `typescript`, `@typescript-eslint/eslint-plugin`, `@typescript-eslint/parser`, `eslint-config-airbnb-typescript`, `eslint-import-resolver-typescript`:
+
+```bash
+pnpm add -D eslint @octetstream/eslint-config typescript @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-config-airbnb-typescript eslint-import-resolver-typescript
+```
+
+React configuration requires additional dependencies: `eslint-plugin-react`, `eslint-plugin-react-hooks`, and `eslint-plugin-jsx-a11y`.
+
+```bash
+pnpm add -D eslint @octetstream/eslint-config eslint-plugin-react eslint-plugin-react-hooks eslint-plugin-jsx-a11y
 ```
 
 ## Usage
 
 Create an `.eslintrc.json` at the root of your project and add the following content:
 
-```json
+```json5
 {
   "extends": [
     "@octetstream"
@@ -24,7 +38,7 @@ This package includes configs for typescript and ES Modules, and also for React.
 
 ESM:
 
-```json
+```json5
 {
   "extends": [
     "@octetstream/eslint-config/esm"
@@ -34,27 +48,33 @@ ESM:
 
 TypeScript (CJS):
 
-```json
+```json5
 {
   "extends": [
     "@octetstream/eslint-config/typescript"
-  ]
+  ],
+  "parserOptions": {
+    "project": "./tsconfig.json" // Path to tsconfig is required in every TypeScript config!
+  }
 }
 ```
 
 TypeScript (ESM):
 
-```json
+```json5
 {
   "extends": [
     "@octetstream/eslint-config/esm/typescript"
-  ]
+  ],
+  "parserOptions": {
+    "project": "./tsconfig.json" // Path to tsconfig is required in every TypeScript config!
+  }
 }
 ```
 
 React (CJS):
 
-```json
+```json5
 {
   "extends": [
     "@octetstream/eslint-config/react"
@@ -64,7 +84,7 @@ React (CJS):
 
 React (ESM):
 
-```json
+```json5
 {
   "extends": [
     "@octetstream/eslint-config/esm/react"
@@ -74,25 +94,29 @@ React (ESM):
 
 React + TypeScript (CJS):
 
-```json
+```json5
 {
   "extends": [
     "@octetstream/eslint-config/typescript/react"
-  ]
+  ],
+  "parserOptions": {
+    "project": "./tsconfig.json" // Path to tsconfig is required in every TypeScript config!
+  }
 }
 ```
 
 React + TypeScript (ESM):
 
-```json
+```json5
 {
   "extends": [
     "@octetstream/eslint-config/esm/typescript/react"
-  ]
+  ],
+  "parserOptions": {
+    "project": "./tsconfig.json" // Path to tsconfig is required in every TypeScript config!
+  }
 }
 ```
-
-React configuration requires additional dependencies: `eslint-plugin-react`, `eslint-plugin-react-hooks`, and `eslint-plugin-jsx-a11y`.
 
 ### Rules
 
