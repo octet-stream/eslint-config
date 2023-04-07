@@ -1,5 +1,5 @@
 module.exports = {
-  extends: ["./esm.js", "../typescript.js"],
+  extends: ["../esm.js", "../../typescript/typescript.js"],
   rules: {
     // import plugin expects .ts extension for some reason
     // so I disable this rule for .ts, .tsx, .cts, .mts extensions
