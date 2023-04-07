@@ -4,11 +4,13 @@ module.exports = {
     browser: true
   },
   plugins: [
-    "promise"
+    "promise",
+    "ava"
   ],
   extends: [
     "airbnb-base",
-    "plugin:promise/recommended"
+    "plugin:promise/recommended",
+    "plugin:ava/recommended"
   ],
   rules: {
     camelcase: ["error"],
@@ -67,6 +69,18 @@ module.exports = {
       ]
     }],
 
+    // TODO: Add react-specific config
     "react/jsx-filename-extension": 0,
+
+    "ava/no-ignored-test-files": ["error", {
+      "files": [
+        "src/**/*.{js,jsx}"
+      ],
+      "helpers": [
+        "src/**/__macro__/**/*.{js,jsx}",
+        "src/**/__helper__/**/*.{js,jsx}",
+        "src/**/__fixture__/**/*.{js,jsx}"
+      ]
+    }]
   }
 }

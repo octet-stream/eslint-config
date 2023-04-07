@@ -15,23 +15,24 @@
   "repository": "octet-stream/eslint-config",
   "dependencies": {
     "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-promise": "^6.0.0"
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-promise": "^6.1.1"
   },
   "peerDependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.27.1",
-    "@typescript-eslint/parser": "^5.27.1",
-    "eslint": "^8.0.0",
-    "eslint-config-airbnb-typescript": "^17.0.0",
-    "eslint-import-resolver-typescript": "^2.7.1",
-    "typescript": "^4.7.3"
+    "@typescript-eslint/eslint-plugin": "5.x",
+    "@typescript-eslint/parser": "5.x",
+    "eslint": "8.x",
+    "eslint-config-airbnb-typescript": "17.x",
+    "eslint-import-resolver-typescript": "3.x",
+    "typescript": ">= 4.7.x < 5.x || 5.x"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.27.1",
-    "@typescript-eslint/parser": "^5.27.1",
-    "eslint": "^8.0.0",
+    "@typescript-eslint/eslint-plugin": "^5.57.1",
+    "@typescript-eslint/parser": "^5.57.1",
+    "eslint": "^8.37.0",
     "eslint-config-airbnb-typescript": "^17.0.0",
-    "eslint-import-resolver-typescript": "^2.7.1",
-    "typescript": "^4.7.3"
+    "eslint-import-resolver-typescript": "^3.5.5",
+    "eslint-plugin-ava": "^14.0.0",
+    "typescript": "^5.0.3"
   }
 }
