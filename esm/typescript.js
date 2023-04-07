@@ -6,10 +6,10 @@ module.exports = {
     "import/extensions": ["error", "ignorePackages", {ts: "never", tsx: "never", mts: "never", cts: "never"}],
     "import/no-extraneous-dependencies": ["error", {
       "devDependencies": [
-        "**/*.test.{ts,tsx}",
-        "**/__helper__/**/*.{ts,tsx}",
-        "**/__fixture__/**/*.{ts,tsx}",
-        "**/__macro__/**/*.{ts,tsx}"
+        "**/*.test.{ts,mts,cts,tsx}",
+        "**/__helper__/**/*.{ts,mts,cts,tsx}",
+        "**/__fixture__/**/*.{ts,mts,cts,tsx}",
+        "**/__macro__/**/*.{ts,mts,cts,tsx}"
       ]
     }],
 

@@ -14,6 +14,15 @@ module.exports = {
     "@typescript-eslint/object-curly-spacing": ["error", "never"],
     "@typescript-eslint/comma-dangle": 0,
 
+    "import/no-extraneous-dependencies": ["error", {
+      "devDependencies": [
+        "**/*.test.{ts,tsx}",
+        "**/__helper__/**/*.{ts,tsx}",
+        "**/__fixture__/**/*.{ts,tsx}",
+        "**/__macro__/**/*.{ts,tsx}"
+      ]
+    }],
+
     "ava/no-ignored-test-files": ["error", {
       "files": [
         "src/**/*.{ts,tsx}"

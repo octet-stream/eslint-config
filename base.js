@@ -62,10 +62,10 @@ module.exports = {
     "import/prefer-default-export": 0,
     "import/no-extraneous-dependencies": ["error", {
       "devDependencies": [
-        "**/*.test.{js,cjs,mjs,jsx}",
-        "**/__helper__/**/*.{js,cjs,mjs,jsx}",
-        "**/__fixture__/**/*.{js,cjs,mjs,jsx}",
-        "**/__macro__/**/*.{js,cjs,mjs,jsx}"
+        "**/*.test.{js,cjs,jsx}",
+        "**/__helper__/**/*.{js,cjs,jsx}",
+        "**/__fixture__/**/*.{js,cjs,jsx}",
+        "**/__macro__/**/*.{js,cjs,jsx}"
       ]
     }],
 
@@ -74,12 +74,12 @@ module.exports = {
 
     "ava/no-ignored-test-files": ["error", {
       "files": [
-        "src/**/*.{js,jsx}"
+        "src/**/*.{js,cjs,jsx}"
       ],
       "helpers": [
-        "src/**/__macro__/**/*.{js,jsx}",
-        "src/**/__helper__/**/*.{js,jsx}",
-        "src/**/__fixture__/**/*.{js,jsx}"
+        "src/**/__macro__/**/*.{js,cjs,jsx}",
+        "src/**/__helper__/**/*.{js,cjs,jsx}",
+        "src/**/__fixture__/**/*.{js,cjs,jsx}"
       ]
     }]
   }
