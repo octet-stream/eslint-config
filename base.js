@@ -13,14 +13,16 @@ module.exports = {
     "plugin:ava/recommended"
   ],
   rules: {
+    indent: ["error", 2],
     camelcase: ["error"],
     semi: ["error", "never"],
     quotes: ["error", "double"],
-    "max-len": ["error", {
-      code: 80,
-      ignoreRegExpLiterals: true,
-      ignoreComments: true,
-      ignoreUrls: true
+    "max-len": ["error", 80, {
+      "ignoreComments": true,
+      "ignoreUrls": true,
+      "ignoreStrings": true,
+      "ignoreTemplateLiterals": true,
+      "ignoreRegExpLiterals": true
     }],
     "prefer-const": ["error", {
       destructuring: "all"

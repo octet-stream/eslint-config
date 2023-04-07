@@ -20,6 +20,80 @@ Create an `.eslintrc.json` at the root of your project and add the following con
 }
 ```
 
+This package includes configs for typescript and ES Modules, and also for React.
+
+ESM:
+
+```json
+{
+  "extends": [
+    "@octetstream/eslint-config/esm"
+  ]
+}
+```
+
+TypeScript (CJS):
+
+```json
+{
+  "extends": [
+    "@octetstream/eslint-config/typescript"
+  ]
+}
+```
+
+TypeScript (ESM):
+
+```json
+{
+  "extends": [
+    "@octetstream/eslint-config/esm/typescript"
+  ]
+}
+```
+
+React (CJS):
+
+```json
+{
+  "extends": [
+    "@octetstream/eslint-config/react"
+  ]
+}
+```
+
+React (ESM):
+
+```json
+{
+  "extends": [
+    "@octetstream/eslint-config/esm/react"
+  ]
+}
+```
+
+React + TypeScript (CJS):
+
+```json
+{
+  "extends": [
+    "@octetstream/eslint-config/typescript/react"
+  ]
+}
+```
+
+React + TypeScript (ESM):
+
+```json
+{
+  "extends": [
+    "@octetstream/eslint-config/esm/typescript/react"
+  ]
+}
+```
+
+React configuration requires additional dependencies: `eslint-plugin-react`, `eslint-plugin-react-hooks`, and `eslint-plugin-jsx-a11y`.
+
 ### Rules
 
 This section contains the list of rules that I changed comparad to AirBnb config.

@@ -13,6 +13,10 @@ module.exports = {
     "@typescript-eslint/quotes": ["error", "double"],
     "@typescript-eslint/object-curly-spacing": ["error", "never"],
     "@typescript-eslint/comma-dangle": 0,
+    "no-unused-vars": 0,
+    "@typescript-eslint/no-unused-vars": ["error", {
+      "argsIgnorePattern": "^_"
+    }],
 
     "import/no-extraneous-dependencies": ["error", {
       "devDependencies": [
