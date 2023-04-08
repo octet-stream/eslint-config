@@ -1,6 +1,12 @@
 module.exports = {
-  extends: ["../react.js", "./typescript.js"],
+  extends: [
+    "../react.js",
+    "./typescript.js"
+  ].map(path => require.resolve(path)),
   rules: {
-    "react/prop-types": 0 // Useless rule when using typescript
+    "react/prop-types": 0, // Useless rule when using typescript
+    "react/jsx-filename-extension": ["error", {
+      extensions: ["tsx"]
+    }],
   }
 }

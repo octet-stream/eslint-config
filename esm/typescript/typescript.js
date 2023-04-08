@@ -1,9 +1,14 @@
 module.exports = {
-  extends: ["../esm.js", "../../typescript/typescript.js"],
+  extends: [
+    "../esm.js",
+    "../../typescript/typescript.js"
+  ].map(path => require.resolve(path)),
   rules: {
     // import plugin expects .ts extension for some reason
     // so I disable this rule for .ts, .tsx, .cts, .mts extensions
-    "import/extensions": ["error", "ignorePackages", {ts: "never", tsx: "never", mts: "never", cts: "never"}],
+    "import/extensions": ["error", "ignorePackages", {
+      ts: "never", tsx: "never", mts: "never", cts: "never"
+    }],
     "import/no-extraneous-dependencies": ["error", {
       "devDependencies": [
         "**/*.test.{ts,mts,cts,tsx}",

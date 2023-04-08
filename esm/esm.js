@@ -1,5 +1,5 @@
 module.exports = {
-  extends: ["../base.js"],
+  extends: ["../base.js"].map(path => require.resolve(path)),
   rules: {
     "import/extensions": ["error", "ignorePackages"],
     "import/prefer-default-export": 0,

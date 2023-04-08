@@ -13,7 +13,11 @@ module.exports = {
     "plugin:ava/recommended"
   ],
   rules: {
-    indent: ["error", 2],
+    indent: ["error", 2, {
+      SwitchCase: 1,
+      flatTernaryExpressions: false,
+      offsetTernaryExpressions: false
+    }],
     camelcase: ["error"],
     semi: ["error", "never"],
     quotes: ["error", "double"],
@@ -70,9 +74,6 @@ module.exports = {
         "**/__macro__/**/*.{js,cjs,jsx}"
       ]
     }],
-
-    // TODO: Add react-specific config
-    "react/jsx-filename-extension": 0,
 
     "ava/no-ignored-test-files": ["error", {
       "files": [
