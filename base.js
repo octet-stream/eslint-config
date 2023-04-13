@@ -19,8 +19,9 @@ module.exports = {
       offsetTernaryExpressions: false
     }],
     camelcase: ["error"],
-    semi: ["error", "never"],
     quotes: ["error", "double"],
+    semi: ["error", "never"],
+    "semi-style": ["error", "first"],
     "max-len": ["error", 80, {
       "ignoreComments": true,
       "ignoreUrls": true,

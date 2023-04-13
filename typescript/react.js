@@ -8,5 +8,6 @@ module.exports = {
     "react/jsx-filename-extension": ["error", {
       extensions: ["tsx"]
     }],
+    "react/require-default-props": 0
   }
 }
