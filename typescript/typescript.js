@@ -18,6 +18,23 @@ module.exports = {
       "argsIgnorePattern": "^_"
     }],
 
+    "indent": ["error", 2, {
+      SwitchCase: 1,
+      flatTernaryExpressions: false,
+      offsetTernaryExpressions: false,
+      "ignoredNodes": [
+        "PropertyDefinition[decorators]"
+      ]
+    }],
+    "@typescript-eslint/indent": ["error", 2, {
+      SwitchCase: 1,
+      flatTernaryExpressions: false,
+      offsetTernaryExpressions: false,
+      "ignoredNodes": [
+        "PropertyDefinition[decorators]"
+      ]
+    }],
+
     "import/no-extraneous-dependencies": ["error", {
       "devDependencies": [
         "**/*.test.{ts,tsx}",
