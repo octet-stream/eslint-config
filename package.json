@@ -1,4 +1,5 @@
 {
+  "type": "module",
   "name": "@octetstream/eslint-config",
   "version": "7.2.1",
   "description": "AirBnb-based ESlint config, tweaked for my needs.",
@@ -6,17 +7,24 @@
   "license": "MIT",
   "main": "./base.js",
   "exports": {
-    ".": "./base.js",
-    "./react": "./react.js",
-    "./typescript": "./typescript/typescript.js",
-    "./typescript/react": "./typescript/react.js",
-    "./esm": "./esm/esm.js",
-    "./esm/react": "./esm/react.js",
-    "./esm/typescript": "./esm/typescript/typescript.js",
-    "./esm/typescript/react": "./esm/typescript/react.js",
+    ".": {
+      "import": "./lib/configs/base.mjs",
+      "require": "./lib/configs/base.cjs"
+    },
+    "./typescript": {
+      "import": "./lib/configs/typescript.mjs",
+      "require": "./lib/configs/typescript.cjs"
+    },
     "./package.json": "./package.json"
   },
+  "files": [
+    "lib"
+  ],
   "repository": "octet-stream/eslint-config",
+  "scripts": {
+    "build": "unbuild",
+    "test": "pnpm build && cross-env NODE_OPTIONS=\"--no-warnings --loader=ts-node/esm\" ava"
+  },
   "pnpm": {
     "peerDependencyRules": {
       "ignoreMissing": [
@@ -35,7 +43,7 @@
   "dependencies": {
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-ava": "^14.0.0",
-    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-import": "^2.29.1",
     "eslint-plugin-promise": "^6.1.1"
   },
   "peerDependencies": {
@@ -51,15 +59,22 @@
     "typescript": ">= 4.7.x < 5.x || 5.x"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.57.1",
-    "@typescript-eslint/parser": "^5.57.1",
-    "eslint": "^8.37.0",
+    "@types/eslint": "^8.44.9",
+    "@types/node": "^20.10.4",
+    "@typescript-eslint/eslint-plugin": "^6.14.0",
+    "@typescript-eslint/parser": "^6.14.0",
+    "ava": "^6.0.1",
+    "cross-env": "^7.0.3",
+    "dedent": "^1.5.1",
+    "eslint": "^8.56.0",
     "eslint-config-airbnb": "^19.0.4",
-    "eslint-config-airbnb-typescript": "^17.0.0",
-    "eslint-import-resolver-typescript": "^3.5.5",
-    "eslint-plugin-jsx-a11y": "^6.7.1",
-    "eslint-plugin-react": "^7.32.2",
+    "eslint-config-airbnb-typescript": "^17.1.0",
+    "eslint-import-resolver-typescript": "^3.6.1",
+    "eslint-plugin-jsx-a11y": "^6.8.0",
+    "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.6.0",
-    "typescript": "^5.0.3"
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3",
+    "unbuild": "^2.0.0"
   }
 }
