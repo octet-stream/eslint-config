@@ -9,8 +9,7 @@ export default {
   parserOptions: {
     ecmaVersion: "latest",
     parser: {
-      js: "espree",
-      jsx: "espree"
+      js: "espree"
     }
   },
   plugins: [

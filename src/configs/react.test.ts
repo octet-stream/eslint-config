@@ -6,15 +6,16 @@ import test from "ava"
 import {withAssertRules} from "../__macro__/withAssertRules.js"
 
 const configPath = fileURLToPath(
-  new URL("../../lib/configs/base.cjs", import.meta.url)
+  new URL("../../lib/configs/react.cjs", import.meta.url)
 )
 
 test("Lints basic code example", withAssertRules, {
   configPath,
+  filePath: "test.jsx",
   code: js`
-    const someNumber = 42
+    const MyComponent = () => <div>Some text</div>
 
-    module.exports = someNumber\n
+    module.exports = MyComponent\n
   `,
   assert: {
     errorCount: 0,

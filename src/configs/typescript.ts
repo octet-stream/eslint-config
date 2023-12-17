@@ -1,7 +1,11 @@
 import type {ESLint} from "eslint"
 
 export default {
-  extends: "./base",
+  extends: [
+    "./base.cjs", // TODO: Add resolveConfigBase or emit cjs only
+    "plugin:@typescript-eslint/eslint-recommended"
+  ],
+  parser: "@typescript-eslint/parser",
   parserOptions: {
     ecmaVersion: "latest",
     parser: {

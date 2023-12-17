@@ -5,7 +5,6 @@
   "description": "AirBnb-based ESlint config, tweaked for my needs.",
   "author": "Nick K.",
   "license": "MIT",
-  "main": "./base.js",
   "exports": {
     ".": {
       "import": "./lib/configs/base.mjs",
@@ -14,6 +13,10 @@
     "./typescript": {
       "import": "./lib/configs/typescript.mjs",
       "require": "./lib/configs/typescript.cjs"
+    },
+    "./react": {
+      "import": "./lib/configs/react.mjs",
+      "require": "./lib/configs/react.cjs"
     },
     "./package.json": "./package.json"
   },
