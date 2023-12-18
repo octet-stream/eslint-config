@@ -18,14 +18,26 @@ export default {
     ignoreRegExpLiterals: true
   }],
 
+  indent: ["error", 2, {
+    SwitchCase: 1
+  }],
+
+  "comma-dangle": ["error", "never"],
+
   // Prefer `const` over `let`, unless value is mutable
   "prefer-const": ["error", {
     destructuring: "all"
   }],
 
   // Allow `++` operator
-  "no-plusplus": 0,
+  "no-plusplus": "off",
 
   // Prohibit spaces inside braces
   "object-curly-spacing": ["error", "never"],
+
+  "object-curly-newline": ["error", {
+    consistent: true
+  }],
+
+  "arrow-parens": ["error", "as-needed"]
 } satisfies Partial<ESLintRules>

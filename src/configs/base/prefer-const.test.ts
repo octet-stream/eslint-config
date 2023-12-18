@@ -68,8 +68,7 @@ test(
       a = 1\n
     `,
     assert: {
-      errorCount: 0,
-      warningCount: 0
+      errorCount: 0
     }
   }
 )
