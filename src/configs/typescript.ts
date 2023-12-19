@@ -2,7 +2,7 @@ import type {ESLint} from "eslint"
 
 export default {
   extends: [
-    "./base.cjs",
+    "./base.js",
     "plugin:@typescript-eslint/eslint-recommended"
   ],
   parser: "@typescript-eslint/parser",

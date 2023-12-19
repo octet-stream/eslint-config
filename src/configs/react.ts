@@ -3,6 +3,7 @@ import {ESLint} from "eslint"
 import baseRules from "../rules/base.js"
 
 export default {
+  extends: "./base.js",
   parserOptions: {
     ecmaFeatures: {
       jsx: true
@@ -12,7 +13,6 @@ export default {
       jsx: "espree"
     }
   },
-  extends: "./base.cjs",
   rules: {
     ...baseRules
   }

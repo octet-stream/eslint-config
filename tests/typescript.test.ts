@@ -6,7 +6,7 @@ import test from "ava"
 import {withAssertRules} from "./__macro__/withAssertRules.js"
 
 const configPath = fileURLToPath(
-  new URL("../lib/configs/typescript.cjs", import.meta.url)
+  new URL("../lib/configs/typescript.js", import.meta.url)
 )
 
 test("Lints basic code example with TypeScript code", withAssertRules, {

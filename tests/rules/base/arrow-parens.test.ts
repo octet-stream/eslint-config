@@ -6,7 +6,7 @@ import test from "ava"
 import {withAssertRules} from "../../__macro__/withAssertRules.js"
 
 const configPath = fileURLToPath(
-  new URL("../../../lib/configs/base.cjs", import.meta.url)
+  new URL("../../../lib/configs/base.js", import.meta.url)
 )
 
 test("Passes w/o arrow parens if there's only 1 argument", withAssertRules, {

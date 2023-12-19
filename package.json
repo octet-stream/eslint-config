@@ -16,7 +16,7 @@
   "repository": "octet-stream/eslint-config",
   "scripts": {
     "build": "unbuild",
-    "test": "pnpm build && cross-env NODE_OPTIONS=\"--no-warnings --loader=ts-node/esm\" ava"
+    "test": "pnpm build && cross-env NODE_OPTIONS=\"--no-warnings --import tsx\" ava"
   },
   "pnpm": {
     "peerDependencyRules": {
@@ -67,6 +67,7 @@
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "ts-node": "^10.9.2",
+    "tsx": "^4.6.2",
     "typescript": "^5.3.3",
     "unbuild": "^2.0.0"
   }
