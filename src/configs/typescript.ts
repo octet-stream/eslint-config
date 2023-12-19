@@ -18,5 +18,10 @@ export default {
     "import/resolver": {
       typescript: {}
     }
+  },
+  rules: {
+    // Disable no-unused-vars, because TS can validate such cases
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": "off"
   }
 } satisfies ESLint.ConfigData
