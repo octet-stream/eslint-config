@@ -7,7 +7,13 @@ type MessageAssertions = Partial<
   Pick<
     Linter.LintMessage,
 
-    "messageId" | "ruleId" | "severity" | "fatal" | "suggestions" | "message"
+    | "messageId"
+    | "ruleId"
+    | "severity"
+    | "fatal"
+    | "suggestions"
+    | "message"
+    | "nodeType"
   >
 >
 

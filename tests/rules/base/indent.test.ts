@@ -6,7 +6,7 @@ import test from "ava"
 import {withAssertRules} from "../../__macro__/withAssertRules.js"
 
 const configPath = fileURLToPath(
-  new URL("../../../lib/configs/base.js", import.meta.url)
+  new URL("../../../lib/configs/esm.js", import.meta.url)
 )
 
 test("Passes with 2 spaces indent", withAssertRules, {

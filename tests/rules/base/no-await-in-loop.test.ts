@@ -11,13 +11,14 @@ const configPath = fileURLToPath(
 
 test("Passes w/o arrow parens if there's only 1 argument", withAssertRules, {
   configPath,
-  overrideConfig: {
-    rules: {
-      "no-unused-vars": 0
-    }
-  },
   code: js`
-    const someFunc = a => a\n
+    import {setTimeout} from "node:timers/promises"
+
+    const tasks = [1, 2, 3, 4, 5].map(value => value * 1000)
+
+    for (const task of tasks) {
+      await setTimeout(task)
+    }\n
   `,
   assert: {
     errorCount: 0
