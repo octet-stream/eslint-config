@@ -11,13 +11,8 @@ const configPath = fileURLToPath(
 
 test("Fails on extra semi", withAssertRules, {
   configPath,
-  overrideConfig: {
-    rules: {
-      "no-console": 0
-    }
-  },
   code: js`
-    console.log("Should have error because of extra ; at the end of the line");\n
+    export default "Should have error because of extra ; at the end of the line";\n
   `,
   assert: {
     errorCount: 1,

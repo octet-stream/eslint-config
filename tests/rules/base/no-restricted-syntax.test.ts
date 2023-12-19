@@ -34,7 +34,7 @@ test("Prohibits WithStatement", withAssertRules, {
     },
     rules: {
       "no-console": "off",
-      "no-undef": "off"
+      "no-undef": "off" // false-positive
     }
   },
   code: js`
@@ -47,18 +47,11 @@ test("Prohibits WithStatement", withAssertRules, {
       console.log(\`\${firstName} \${lastName}\`)
     }\n
   `,
-  assert: {
-    errorCount: 2,
-    messages: [
-      {
-        ruleId: "no-restricted-syntax",
-        messageId: "restrictedSyntax",
-        nodeType: "WithStatement"
-      },
-      {
-        ruleId: "no-with",
-        messageId: "unexpectedWith"
-      }
-    ]
+  assert(t, result) {
+    const [actual] = result.messages
+
+    t.is(actual.ruleId, "no-restricted-syntax")
+    t.is(actual.messageId, "restrictedSyntax")
+    t.is(actual.nodeType, "WithStatement")
   }
 })

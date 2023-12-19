@@ -11,13 +11,8 @@ const configPath = fileURLToPath(
 
 test("Passes w/o arrow parens if there's only 1 argument", withAssertRules, {
   configPath,
-  overrideConfig: {
-    rules: {
-      "no-unused-vars": 0
-    }
-  },
   code: js`
-    const someFunc = a => a\n
+    export const someFunc = a => a\n
   `,
   assert: {
     errorCount: 0

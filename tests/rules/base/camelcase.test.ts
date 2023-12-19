@@ -11,28 +11,23 @@ const configPath = fileURLToPath(
 
 test("Passes on camel case", withAssertRules, {
   configPath,
-  overrideConfig: {
-    rules: {
-      "no-unused-vars": 0
-    }
-  },
   code: js`
-    const someVariable = 123
+    export const someVariable = 123
 
-    function someFunction() { }
+    export function someFunction() { }
 
-    const someObject = {
+    export const someObject = {
       someKey: "some value"
     }
 
-    class SomeClass { }\n
+    export class SomeClass { }\n
   `,
   assert: {
     errorCount: 0
   }
 })
 
-test("Passes on underscore case", withAssertRules, {
+test("Fails on underscore case", withAssertRules, {
   configPath,
   overrideConfig: {
     rules: {
@@ -40,15 +35,15 @@ test("Passes on underscore case", withAssertRules, {
     }
   },
   code: js`
-    const some_variable = 123
+    export const some_variable = 123
 
-    function some_function() { }
+    export function some_function() { }
 
-    const some_object = {
+    export const some_object = {
       someKey: "some value"
     }
 
-    class Some_Class { }\n
+    export class Some_Class { }\n
   `,
   assert: {
     errorCount: 4,

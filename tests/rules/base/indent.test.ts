@@ -12,7 +12,7 @@ const configPath = fileURLToPath(
 test("Allows 2 spaces", withAssertRules, {
   configPath,
   code: js`
-    module.exports = function add(a, b) {
+    export function add(a, b) {
       return a + b
     }\n
   `,
@@ -24,7 +24,7 @@ test("Allows 2 spaces", withAssertRules, {
 test("Prohibits tabs", withAssertRules, {
   configPath,
   code: (js`
-    module.exports = function add(a, b) {
+    export function add(a, b) {
       return a + b
     }\n
   `).replace("  ", "\t"),

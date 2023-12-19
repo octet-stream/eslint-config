@@ -12,7 +12,7 @@ const configPath = fileURLToPath(
 test("When operator at the EOL", withAssertRules, {
   configPath,
   code: js`
-    module.exprots = "this line is pretty long and also " +
+    export default "this line is pretty long and also " +
       "it was split in two pieces"\n
   `,
   assert: {

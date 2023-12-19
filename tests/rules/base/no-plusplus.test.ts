@@ -36,7 +36,7 @@ test("Allows i++ operator", withAssertRules, {
   code: js`
     let i = 0
 
-    ++i\n
+    i++\n
   `,
   assert: {
     errorCount: 0
