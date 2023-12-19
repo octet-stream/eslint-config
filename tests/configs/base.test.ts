@@ -3,19 +3,18 @@ import {fileURLToPath} from "node:url"
 import js from "dedent"
 import test from "ava"
 
-import {withAssertRules} from "./__macro__/withAssertRules.js"
+import {withAssertRules} from "../__macro__/withAssertRules.js"
 
 const configPath = fileURLToPath(
-  new URL("../lib/configs/react.js", import.meta.url)
+  new URL("../../lib/configs/base.js", import.meta.url)
 )
 
 test("Lints basic code example", withAssertRules, {
   configPath,
-  filePath: "test.jsx",
   code: js`
-    const MyComponent = () => <div>Some text</div>
+    const someNumber = 42
 
-    module.exports = MyComponent\n
+    module.exports = someNumber\n
   `,
   assert: {
     errorCount: 0,
