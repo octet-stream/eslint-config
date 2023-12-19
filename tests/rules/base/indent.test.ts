@@ -42,8 +42,7 @@ test("Fails with tab indent", withAssertRules, {
   }
 })
 
-// TODO: Rewrite macro to support `assert` field function
-test.failing("Requires a level of indent within SwitchCase statement", withAssertRules, {
+test("Requires a level of indent within SwitchCase statement", withAssertRules, {
   configPath,
   overrideConfig: {
     rules: {
@@ -64,11 +63,17 @@ test.failing("Requires a level of indent within SwitchCase statement", withAsser
       console.log("default")
     }\n
   `,
-  assert: {
-    messages: Array.from({length: 8}).fill({}).map(() => ({
-      ruleId: "indent",
-      messageid: "wrongIndentation",
-      message: "Expected indentation of 4 spaces but found 2."
-    }))
+  assert(t, result) {
+    const [actual] = result.messages
+
+    if (!actual) {
+      return t.fail("no messages")
+    }
+
+    t.is(actual.ruleId, "indent")
+    t.is(actual.messageId, "wrongIndentation")
+    t.is(actual.message, "Expected indentation of 2 spaces but found 0.")
+    t.is(actual.line, 4)
+    t.is(actual.column, 1)
   }
 })

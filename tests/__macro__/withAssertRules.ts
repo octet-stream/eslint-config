@@ -1,7 +1,12 @@
+/* eslint-disable ava/no-ignored-test-files */
+
 import dedent from "dedent"
 import test from "ava"
 
+import type {ExecutionContext} from "ava"
 import {ESLint, type Linter} from "eslint"
+
+import type {Simplify} from "../__helpers__/Simplify.js"
 
 type MessageAssertions = Partial<
   Pick<
@@ -14,23 +19,48 @@ type MessageAssertions = Partial<
     | "suggestions"
     | "message"
     | "nodeType"
+    | "line"
+    | "column"
+    | "endLine"
+    | "endColumn"
   >
 >
 
-type ResultAssertions = Partial<
-  Pick<
-    Omit<ESLint.LintResult, "messages"> & {messages: MessageAssertions[]},
+type WithMessageAssertions<T> =
+  Omit<T, "messages"> & {messages: Simplify<MessageAssertions>[]}
 
-    "messages" | "errorCount" | "fatalErrorCount" | "warningCount"
+type ResultAssertions = Simplify<
+  Partial<
+    Pick<
+      WithMessageAssertions<ESLint.LintResult>,
+
+      "messages" | "errorCount" | "fatalErrorCount" | "warningCount"
+    >
   >
 >
+
+type AssertImplementationResultArg = Simplify<Required<ResultAssertions>>
+
+type AssertImplementation =
+  | (
+      (
+        t: ExecutionContext,
+        result: AssertImplementationResultArg
+      ) => Promise<void>
+  )
+  | (
+    (
+      t: ExecutionContext,
+      result: AssertImplementationResultArg
+    ) => void
+  )
 
 interface Params {
   code: string
   configPath: string
   filePath?: string,
   overrideConfig?: Linter.Config,
-  assert: ResultAssertions
+  assert: ResultAssertions | AssertImplementation
 }
 
 export const withAssertRules = test.macro(async (t, params: Params) => {
@@ -39,7 +69,7 @@ export const withAssertRules = test.macro(async (t, params: Params) => {
     assert,
     configPath,
     overrideConfig,
-    filePath = "test.js",
+    filePath = "test.js"
   } = params
 
   const eslint = new ESLint({
@@ -52,6 +82,10 @@ export const withAssertRules = test.macro(async (t, params: Params) => {
 
   if (!result) {
     return t.fail("ESlint returned no result")
+  }
+
+  if (typeof assert === "function") {
+    return assert(t, result)
   }
 
   // Set plan to the number of keys in `assert` object + amount of messages
