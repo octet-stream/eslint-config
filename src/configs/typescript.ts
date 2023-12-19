@@ -13,5 +13,5 @@ export default {
       tsx: "@typescript-eslint/parser"
     }
   },
-  plugins: ["@typescript-eslint"],
+  plugins: ["@typescript-eslint"]
 } satisfies ESLint.ConfigData

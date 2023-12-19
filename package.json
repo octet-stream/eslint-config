@@ -16,6 +16,7 @@
   "repository": "octet-stream/eslint-config",
   "scripts": {
     "build": "unbuild",
+    "postinstall": "pnpm build",
     "test": "pnpm build && cross-env NODE_OPTIONS=\"--no-warnings --import tsx\" ava"
   },
   "pnpm": {
