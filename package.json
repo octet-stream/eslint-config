@@ -6,8 +6,12 @@
   "license": "MIT",
   "exports": {
     ".": "./lib/configs/base.js",
-    "./typescript": "./lib/configs/typescript.js",
+    "./esm": "./lib/configs/esm.js",
     "./react": "./lib/configs/react.js",
+    "./typescript": "./lib/configs/typescript.js",
+    "./typescript/react": "./lib/configs/typescript/react.js",
+    "./typescript/esm": "./lib/configs/typescript/esm.js",
+    "./typescript/esm/react": "./lib/configs/typescript/esm/react.js",
     "./package.json": "./package.json"
   },
   "files": [
