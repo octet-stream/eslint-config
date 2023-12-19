@@ -9,7 +9,7 @@ const configPath = fileURLToPath(
   new URL("../../../lib/configs/esm.js", import.meta.url)
 )
 
-test("Passes with 2 spaces indent", withAssertRules, {
+test("Allows 2 spaces", withAssertRules, {
   configPath,
   code: js`
     module.exports = function add(a, b) {
@@ -21,7 +21,7 @@ test("Passes with 2 spaces indent", withAssertRules, {
   }
 })
 
-test("Fails with tab indent", withAssertRules, {
+test("Prohibits tabs", withAssertRules, {
   configPath,
   code: (js`
     module.exports = function add(a, b) {
@@ -42,7 +42,7 @@ test("Fails with tab indent", withAssertRules, {
   }
 })
 
-test("Requires a level of indent within SwitchCase statement", withAssertRules, {
+test("Requires one more level within SwitchCase statement", withAssertRules, {
   configPath,
   overrideConfig: {
     rules: {
@@ -65,10 +65,6 @@ test("Requires a level of indent within SwitchCase statement", withAssertRules, 
   `,
   assert(t, result) {
     const [actual] = result.messages
-
-    if (!actual) {
-      return t.fail("no messages")
-    }
 
     t.is(actual.ruleId, "indent")
     t.is(actual.messageId, "wrongIndentation")
