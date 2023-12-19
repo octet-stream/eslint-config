@@ -13,6 +13,8 @@ export default {
       tsx: "never",
       mts: "never",
       cts: "never"
-    }]
+    }],
+
+    "import/prefer-default-export": "off"
   }
 } satisfies ESLint.ConfigData

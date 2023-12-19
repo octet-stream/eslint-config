@@ -1,6 +1,6 @@
 import {fileURLToPath} from "node:url"
 
-import js from "dedent"
+import jsx from "dedent"
 import test from "ava"
 
 import {withAssertRules} from "../__macro__/withAssertRules.js"
@@ -12,7 +12,7 @@ const configPath = fileURLToPath(
 test("Lints basic code example", withAssertRules, {
   configPath,
   filePath: "test.jsx",
-  code: js`
+  code: jsx`
     const MyComponent = () => <div>Some text</div>
 
     module.exports = MyComponent\n

@@ -1,6 +1,6 @@
 import {fileURLToPath} from "node:url"
 
-import js from "dedent"
+import ts from "dedent"
 import test from "ava"
 
 import {withAssertRules} from "../__macro__/withAssertRules.js"
@@ -12,7 +12,7 @@ const configPath = fileURLToPath(
 test("Lints basic code example with TypeScript code", withAssertRules, {
   configPath,
   filePath: "test.ts",
-  code: js`
+  code: ts`
     type StringOrNumber = string | number
 
     const identifier: StringOrNumber = "some value"
@@ -27,15 +27,10 @@ test("Lints basic code example with TypeScript code", withAssertRules, {
 
 test("Supports JavaScript linting", withAssertRules, {
   configPath,
-  overrideConfig: {
-    rules: {
-      "no-console": 0
-    }
-  },
-  code: js`
+  code: ts`
     const someNumber = 42
 
-    console.log(someNumber)\n
+    module.exports = someNumber\n
   `,
   assert: {
     errorCount: 0,
