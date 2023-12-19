@@ -26,11 +26,11 @@ export default {
     "react/jsx-props-no-spreading": "off",
     "react/jsx-fragments": ["error", "element"],
     "react/require-default-props": ["error", {
-      "functions": "defaultArguments"
+      functions: "defaultArguments"
     }],
     "react/function-component-definition": ["error", {
-      "namedComponents": "arrow-function",
-      "unnamedComponents": "arrow-function"
+      namedComponents: "arrow-function",
+      unnamedComponents: "arrow-function"
     }]
   }
 } satisfies ESLint.ConfigData

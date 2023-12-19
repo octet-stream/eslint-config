@@ -6,6 +6,6 @@ export default {
   ],
   rules: {
     "import/extensions": ["error", "ignorePackages"],
-    "import/prefer-default-export": 0
+    "import/prefer-default-export": "off"
   }
 } satisfies ESLint.ConfigData
