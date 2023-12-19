@@ -1,23 +1,13 @@
 {
-  "type": "module",
   "name": "@octetstream/eslint-config",
   "version": "7.2.1",
   "description": "AirBnb-based ESlint config, tweaked for my needs.",
   "author": "Nick K.",
   "license": "MIT",
   "exports": {
-    ".": {
-      "import": "./lib/configs/base.mjs",
-      "require": "./lib/configs/base.cjs"
-    },
-    "./typescript": {
-      "import": "./lib/configs/typescript.mjs",
-      "require": "./lib/configs/typescript.cjs"
-    },
-    "./react": {
-      "import": "./lib/configs/react.mjs",
-      "require": "./lib/configs/react.cjs"
-    },
+    ".": "./lib/configs/base.js",
+    "./typescript": "./lib/configs/typescript.js",
+    "./react": "./lib/configs/react.js",
     "./package.json": "./package.json"
   },
   "files": [

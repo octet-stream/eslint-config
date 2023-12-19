@@ -4,6 +4,6 @@ export default {
     ts: "module"
   },
   files: [
-    "src/**/*.test.ts"
+    "tests/**/*.test.ts"
   ]
 }
