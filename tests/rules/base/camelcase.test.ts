@@ -47,9 +47,9 @@ test("Fails on underscore case", withAssertRules, {
   `,
   assert: {
     errorCount: 4,
-    messages: new Array(4).fill({}).map(() => ({
+    messages: new Array(4).fill({
       ruleId: "camelcase",
       messageId: "notCamelCase"
-    }))
+    })
   }
 })

@@ -8,7 +8,7 @@ import {ESLint, type Linter} from "eslint"
 
 import type {Simplify} from "../__helpers__/Simplify.js"
 
-type MessageAssertions = Partial<
+export type MessageAssertions = Partial<
   Pick<
     Linter.LintMessage,
 
@@ -26,10 +26,10 @@ type MessageAssertions = Partial<
   >
 >
 
-type WithMessageAssertions<T> =
+export type WithMessageAssertions<T> =
   Omit<T, "messages"> & {messages: Simplify<MessageAssertions>[]}
 
-type ResultAssertions = Simplify<
+export type ResultAssertions = Simplify<
   Partial<
     Pick<
       WithMessageAssertions<ESLint.LintResult>,
