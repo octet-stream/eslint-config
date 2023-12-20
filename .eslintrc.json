@@ -4,7 +4,7 @@
     "import/no-extraneous-dependencies": ["error", {
       "devDependencies": [
         "*.config.{cts,ts,mts}",
-        "test/**/*.ts"
+        "tests/**/*.test.ts"
       ]
     }]
   }

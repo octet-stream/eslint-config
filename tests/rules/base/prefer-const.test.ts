@@ -11,8 +11,13 @@ const configPath = fileURLToPath(
 
 test("Requires `const` for immutable value", withAssertRules, {
   configPath,
+  overrideConfig: {
+    rules: {
+      "no-unused-vars": 0
+    }
+  },
   code: js`
-    export let identifier = "This statement is invalid because of prefer-const"\n
+    let identifier = "This statement is invalid because of prefer-const"\n
   `,
   assert: {
     errorCount: 1,
@@ -27,12 +32,15 @@ test("Requires `const` for immutable value", withAssertRules, {
 
 test("Allows `let` for mutable values", withAssertRules, {
   configPath,
+  overrideConfig: {
+    rules: {
+      "no-unused-vars": 0
+    }
+  },
   code: js`
     let mutableValue = 42
 
     mutableValue = 451\n
-
-    export {mutableValue}
   `,
   assert: {
     errorCount: 0
