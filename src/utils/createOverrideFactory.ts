@@ -4,6 +4,15 @@ type CreateOverrideInput = Omit<Linter.ConfigOverride, "files">
 
 export const createOverrideFactory = (
   params: CreateOverrideInput
-) => <T extends string | string[]>(
-  files: T
-): Linter.ConfigOverride => ({...params, files})
+) => <TFiles extends string | string[], TRules extends Linter.RulesRecord>(
+  files: TFiles,
+  rules?: TRules
+): Linter.ConfigOverride => ({
+  ...params,
+
+  files,
+  rules: {
+    ...params.rules,
+    ...rules
+  }
+})

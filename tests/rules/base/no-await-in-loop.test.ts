@@ -3,7 +3,7 @@ import {fileURLToPath} from "node:url"
 import js from "dedent"
 import test from "ava"
 
-import {withAssertRules} from "../../__macro__/withAssertRules.js"
+import {withAssertRules} from "../../__macros__/withAssertRules.js"
 
 const configPath = fileURLToPath(
   new URL("../../../lib/configs/esm.js", import.meta.url)

@@ -1,4 +1,4 @@
-/* eslint-disable ava/no-ignored-test-files */
+/* eslint-disable @typescript-eslint/indent */
 
 import dedent from "dedent"
 import test from "ava"

@@ -6,22 +6,16 @@ export default {
   env: {
     node: true
   },
+  parser: "espree",
   parserOptions: {
-    ecmaVersion: "latest",
-    parser: {
-      js: "espree"
-    }
+    ecmaVersion: "latest"
   },
   plugins: [
-    "promise",
-    "ava"
+    "promise"
   ],
   extends: [
     "airbnb-base",
-    "plugin:promise/recommended",
-    "plugin:ava/recommended"
+    "plugin:promise/recommended"
   ],
-  rules: {
-    ...baseRules
-  }
+  rules: baseRules
 } satisfies ESLint.ConfigData

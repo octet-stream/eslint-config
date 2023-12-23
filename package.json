@@ -7,11 +7,13 @@
   "exports": {
     "./package.json": "./package.json",
     ".": "./lib/configs/base.js",
+    "./ava": "./lib/configs/ava.js",
     "./esm": "./lib/configs/esm.js",
     "./react": "./lib/configs/react.js",
     "./typescript": "./lib/configs/typescript.js",
-    "./typescript/react": "./lib/configs/typescript/react.js",
+    "./typescript/ava": "./lib/configs/typescript/ava.js",
     "./typescript/esm": "./lib/configs/typescript/esm.js",
+    "./typescript/react": "./lib/configs/typescript/react.js",
     "./typescript/esm/react": "./lib/configs/typescript/esm/react.js",
     "./lib/rules": null
   },
