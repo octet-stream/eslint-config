@@ -5,6 +5,7 @@
   "author": "Nick K.",
   "license": "MIT",
   "exports": {
+    "./package.json": "./package.json",
     ".": "./lib/configs/base.js",
     "./esm": "./lib/configs/esm.js",
     "./react": "./lib/configs/react.js",
@@ -12,8 +13,7 @@
     "./typescript/react": "./lib/configs/typescript/react.js",
     "./typescript/esm": "./lib/configs/typescript/esm.js",
     "./typescript/esm/react": "./lib/configs/typescript/esm/react.js",
-    "./lib/rules": null,
-    "./package.json": "./package.json"
+    "./lib/rules": null
   },
   "files": [
     "lib"
