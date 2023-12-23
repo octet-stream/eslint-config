@@ -25,7 +25,11 @@ export default {
 
   // Enforce indent to use 2 spaces per level
   indent: ["error", 2, {
-    SwitchCase: 1 // Require one more indent level within `SwitchCase` statements
+    SwitchCase: 1, // Require one more indent level within `SwitchCase` statements
+    flatTernaryExpressions: false,
+    ignoredNodes: [
+      "PropertyDefinition[decorators]"
+    ]
   }],
 
   // Enforce no comma dangle
