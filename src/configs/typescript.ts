@@ -1,5 +1,7 @@
-import type {ESLintRules} from "eslint/rules"
 import type {ESLint} from "eslint"
+
+import tsRules from "../rules/typescript.js"
+import tsSettings from "../settings/typescript.js"
 
 export default {
   extends: [
@@ -15,17 +17,11 @@ export default {
     }
   },
   plugins: ["@typescript-eslint"],
-  settings: {
-    "import/resolver": {
-      typescript: {}
+  overrides: [
+    {
+      files: ["*.ts", "*.cts", "*.mts"],
+      settings: tsSettings,
+      rules: tsRules
     }
-  },
-  rules: {
-    // Disable no-unused-vars, because TS can validate such cases
-    "no-unused-vars": "off",
-    "@typescript-eslint/no-unused-vars": "off",
-
-    // Disable consistent return, because it's unnecessary for TypeScript
-    "consistent-return": "off"
-  } satisfies Partial<ESLintRules>
+  ]
 } satisfies ESLint.ConfigData
