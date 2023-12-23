@@ -10,113 +10,46 @@ For basic usage you only need two dependencies:
 pnpm add -D eslint @octetstream/eslint-config
 ```
 
-TypeScript configuration requires path to `tsconfig.json` and following dependencies: `typescript`, `@typescript-eslint/eslint-plugin`, `@typescript-eslint/parser`, `eslint-config-airbnb-typescript`, `eslint-import-resolver-typescript`:
-
-```bash
-pnpm add -D eslint @octetstream/eslint-config typescript @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-config-airbnb-typescript eslint-import-resolver-typescript
-```
-
-React configuration requires additional dependencies: `eslint-plugin-react`, `eslint-plugin-react-hooks`, and `eslint-plugin-jsx-a11y`.
-
-```bash
-pnpm add -D eslint @octetstream/eslint-config eslint-plugin-react eslint-plugin-react-hooks eslint-plugin-jsx-a11y
-```
-
 ## Usage
 
-Create an `.eslintrc.json` at the root of your project and add the following content:
+Create an `.eslintrc.json` at the root of your project and add following content:
 
 ```json5
 {
-  "extends": [
-    "@octetstream"
-  ]
+  "extends": "@octetstream"
 }
 ```
 
-This package includes configs for typescript and ES Modules, and also for React.
-
-ESM:
+This will import `basic` config rules. Use can use other configs via submodules, like this:
 
 ```json5
 {
-  "extends": [
-    "@octetstream/eslint-config/esm"
-  ]
+  "extends": "@octetstream/eslint-config/typescript"
 }
 ```
 
-TypeScript (CJS):
+If you use [`AVA`](https://avajs.dev/) for testing, there's a config for you too.
+But unlike with other configs, this does not extend any of them, so you must use it together with the others:
 
 ```json5
 {
-  "extends": [
-    "@octetstream/eslint-config/typescript"
-  ],
-  "parserOptions": {
-    "project": "./tsconfig.json" // Path to tsconfig is required in every TypeScript config!
-  }
+  "extends": ["@octetstream/eslint-config/esm", "@octetstream/eslint-config/ava"]
 }
 ```
 
-TypeScript (ESM):
+# Available configs
 
-```json5
-{
-  "extends": [
-    "@octetstream/eslint-config/esm/typescript"
-  ],
-  "parserOptions": {
-    "project": "./tsconfig.json" // Path to tsconfig is required in every TypeScript config!
-  }
-}
-```
+Here's list of available configs:
 
-React (CJS):
-
-```json5
-{
-  "extends": [
-    "@octetstream/eslint-config/react"
-  ]
-}
-```
-
-React (ESM):
-
-```json5
-{
-  "extends": [
-    "@octetstream/eslint-config/esm/react"
-  ]
-}
-```
-
-React + TypeScript (CJS):
-
-```json5
-{
-  "extends": [
-    "@octetstream/eslint-config/typescript/react"
-  ],
-  "parserOptions": {
-    "project": "./tsconfig.json" // Path to tsconfig is required in every TypeScript config!
-  }
-}
-```
-
-React + TypeScript (ESM):
-
-```json5
-{
-  "extends": [
-    "@octetstream/eslint-config/esm/typescript/react"
-  ],
-  "parserOptions": {
-    "project": "./tsconfig.json" // Path to tsconfig is required in every TypeScript config!
-  }
-}
-```
+* `/` — base config for JavaScript rules. It extends [`eslint-config-airbnb-base`](https://npmjs.com/package/eslint-config-airbnb-base) config;
+* `/esm` - extends `/` config with ESM rules;
+* `/react` - extends `eslint-config-airbnb` config with hooks support and `jsx-runtime`;
+* `/ava` - adds [eslint-plugin-ava](https://npmjs.com/package/eslint-plugin-ava) with recommemded rules. This config **does not** extend `/` config and must be used in conjunction with other configs;
+* `/typescript` - extends `/` config with recommended TypeScript ESlint rules;
+* `/typescript/esm` - extends `/typescript` config with ESM rules;
+* `/typescript/react` - extends `/typescript` with `/react` config;
+* `/typescript/ava` - extends `/ava` config with TypeScript support. Use it together with other `typescript/*` configs;
+* `/typescript/esm/react` - extends `/typescript/esm` with `/react` config;
 
 ### Rules
 
