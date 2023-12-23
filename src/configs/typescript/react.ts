@@ -20,7 +20,17 @@ export default {
           "**/tests/**/*.tsx",
           "**/e2e/**/*.tsx"
         ]
-      }]
+      }],
+
+      // Disabled due to validation via TypeScript
+      "react/prop-types": "off",
+      "react/require-default-props": "off"
     })
-  ]
+  ],
+  rules: {
+    // Restrict JSX usage to `.jsx` and `.tsx` files only.
+    "react/jsx-filename-extension": ["error", {
+      extensions: [".jsx", "tsx"]
+    }]
+  }
 } satisfies ESLint.ConfigData
