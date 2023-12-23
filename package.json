@@ -12,6 +12,7 @@
     "./typescript/react": "./lib/configs/typescript/react.js",
     "./typescript/esm": "./lib/configs/typescript/esm.js",
     "./typescript/esm/react": "./lib/configs/typescript/esm/react.js",
+    "./lib/rules": null,
     "./package.json": "./package.json"
   },
   "files": [
