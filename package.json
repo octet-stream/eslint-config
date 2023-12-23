@@ -23,6 +23,7 @@
   "repository": "octet-stream/eslint-config",
   "scripts": {
     "build": "unbuild",
+    "eslint": "eslint *.ts",
     "postinstall": "npx is-in-ci || pnpm build",
     "test": "pnpm build && cross-env NODE_OPTIONS=\"--no-warnings --import tsx\" ava",
     "release": "pnpm run build && pnpm exec changeset publish",
