@@ -2,13 +2,5 @@
   "extends": [
     "@octetstream/eslint-config/typescript/esm",
     "@octetstream/eslint-config/typescript/ava"
-  ],
-  "rules": {
-    "import/no-extraneous-dependencies": ["error", {
-      "devDependencies": [
-        "*.config.{cts,ts,mts}",
-        "tests/**/*.ts"
-      ]
-    }]
-  }
+  ]
 }
