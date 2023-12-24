@@ -55,16 +55,17 @@ Here's list of available configs:
 
 This section contains the list of rules that I changed comparad to AirBnb config.
 
-1. Never use the semicolon, until it's necessary: [`semi`](https://eslint.org/docs/rules/semi)
+1. Avoid semicolon, until it's necessary: [`semi`](https://eslint.org/docs/rules/semi)
 
 ```js
 // Good 👍
 
 const string = "On Soviet Moon landscape see binoculars through you!"
 
-const doSomething = () => {}; // Good, because the next expression starts with an array declaration, but does not have an assignment
+const add = (a, b) => a + b
 
-["SIGTERM", "SIGINT"].forEach(signal => process.on(signal, () => { process.exitCode = 0 }))
+// The line starts from semicolon, because of array declaration
+;["SIGTERM", "SIGINT"].forEach(signal => process.on(signal, () => { process.exitCode = 0 }))
 
 // Bad 👎
 
