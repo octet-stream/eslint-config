@@ -37,7 +37,7 @@ But unlike with other configs, this does not extend any of them, so you must use
 }
 ```
 
-# Available configs
+### Available configs
 
 Here's list of available configs:
 
