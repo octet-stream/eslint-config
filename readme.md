@@ -355,3 +355,33 @@ console.log(await Promise.all(tasks))
 #### [`no-restricted-syntax`](https://eslint.org/docs/rules/no-restricted-syntax)
 
 This rule restricts the use of [with](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/with) statement.
+
+### `/esm`
+
+This config extends the base `/` config with ES Modules support.
+
+#### [`import/extensions`](https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/extensions.md)
+
+Always use `.js` file extension for module imports.
+
+##### 👍 Do
+
+```js
+import {something} from "./path/to/a/module.js"
+```
+
+This rule does not apply to packages.
+
+```js
+import {someFunction} from "some-spackage"
+```
+
+##### 👎 Don't
+
+```js
+import {something} from "./path/to/a/module"
+```
+
+#### [`import/prefer-default-export`](https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/prefer-default-export.md)
+
+The use of default and named exports are not restricted.
