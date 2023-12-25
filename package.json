@@ -9,6 +9,7 @@
     ".": "./lib/configs/base.js",
     "./ava": "./lib/configs/ava.js",
     "./esm": "./lib/configs/esm.js",
+    "./esm/react": "./lib/config/esm/react.js",
     "./react": "./lib/configs/react.js",
     "./typescript": "./lib/configs/typescript.js",
     "./typescript/ava": "./lib/configs/typescript/ava.js",
