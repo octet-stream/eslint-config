@@ -54,6 +54,9 @@ export default {
   // Allow to omit arrow parens
   "arrow-parens": ["error", "as-needed"],
 
+  // Avoid unnecessary parenthesis for arrow function body
+  "no-confusing-arrow": "off",
+
   // Allow `await` within loops, because it is useful in many caases
   "no-await-in-loop": "off",
 
