@@ -30,7 +30,7 @@ export default {
   rules: {
     // Restrict JSX usage to `.jsx` and `.tsx` files only.
     "react/jsx-filename-extension": ["error", {
-      extensions: [".jsx", "tsx"]
+      extensions: [".jsx", ".tsx"]
     }]
   }
 } satisfies ESLint.ConfigData

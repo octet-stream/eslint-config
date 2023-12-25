@@ -2,6 +2,7 @@ import type {ESLint} from "eslint"
 
 import tsOverride from "../overrides/typescript.js"
 import tsRules from "../rules/typescript.js"
+import importRules from "../rules/import.js"
 
 export default {
   extends: [
@@ -21,5 +22,6 @@ export default {
         ]
       }]
     })
-  ]
+  ],
+  rules: importRules
 } satisfies ESLint.ConfigData

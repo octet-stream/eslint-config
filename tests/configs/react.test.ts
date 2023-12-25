@@ -6,7 +6,7 @@ import test from "ava"
 import {withAssertRules} from "../__macros__/withAssertRules.js"
 
 const configPath = fileURLToPath(
-  new URL("../../lib/configs/react.js", import.meta.url)
+  new URL("../../lib/configs/esm/react.js", import.meta.url)
 )
 
 test("Lints basic code example", withAssertRules, {
@@ -15,10 +15,29 @@ test("Lints basic code example", withAssertRules, {
   code: jsx`
     const MyComponent = () => <div>Some text</div>
 
-    module.exports = MyComponent\n
+    export default MyComponent\n
   `,
   assert: {
     errorCount: 0,
     warningCount: 0
+  }
+})
+
+test("Prohibits file extensions other than .jsx", withAssertRules, {
+  configPath,
+  filePath: "test.js",
+  code: jsx`
+    export const MyComponent = () => <div>Some text</div>\n
+  `,
+  assert: {
+    errorCount: 1,
+    messages: [
+      {
+        ruleId: "react/jsx-filename-extension",
+        messageId: "noJSXWithExtension",
+        nodeType: "JSXElement",
+        message: "JSX not allowed in files with extension '.js'"
+      }
+    ]
   }
 })

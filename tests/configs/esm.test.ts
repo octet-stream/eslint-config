@@ -34,3 +34,19 @@ test("Passes with signle default export", withAssertRules, {
     warningCount: 0
   }
 })
+
+test("Fails when import module w/o extension", withAssertRules, {
+  configPath,
+  code: js`
+    import "./ava.config"\n
+  `,
+  assert: {
+    errorCount: 1,
+    messages: [
+      {
+        ruleId: "import/extensions",
+        message: "Missing file extension \"mjs\" for \"./ava.config\""
+      }
+    ]
+  }
+})

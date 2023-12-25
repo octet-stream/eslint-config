@@ -1,9 +1,12 @@
 import type {ESLint} from "eslint"
 
+import importRules from "../rules/import.js"
+
 export default {
   extends: "./base.js",
   rules: {
-    "import/extensions": ["error", "ignorePackages"],
-    "import/prefer-default-export": "off"
+    ...importRules,
+
+    "import/extensions": ["error", "ignorePackages"]
   }
 } satisfies ESLint.ConfigData

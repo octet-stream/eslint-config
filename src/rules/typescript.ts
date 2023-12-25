@@ -13,8 +13,5 @@ export default {
   "@typescript-eslint/no-unused-vars": "error",
 
   // Disable consistent return, because it's unnecessary for TypeScript
-  "consistent-return": "off",
-
-  // Allow named exports when there's only one export
-  "import/prefer-default-export": "off"
+  "consistent-return": "off"
 } satisfies Partial<ESLintRules & TypeScriptRules>
