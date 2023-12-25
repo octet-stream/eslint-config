@@ -37,7 +37,7 @@ But unlike with other configs, this does not extend any of them, so you must use
 }
 ```
 
-### Available configs
+## Available configs
 
 Here's list of available configs:
 
@@ -51,7 +51,7 @@ Here's list of available configs:
 * `/typescript/ava` - extends `/ava` config with TypeScript support. Use it together with other `typescript/*` configs;
 * `/typescript/esm/react` - extends `/typescript/esm` with `/react` config;
 
-### Rules
+## Rules
 
 This section contains the list of rules that I changed comparad to AirBnb config.
 
