@@ -41,9 +41,9 @@ But unlike with other configs, this does not extend any of them, so you must use
 
 Here's list of available configs:
 
-* `/` — base config for JavaScript rules. It extends [`eslint-config-airbnb-base`](https://npmjs.com/package/eslint-config-airbnb-base) config;
+* `/` — base config for JavaScript rules. It extends [eslint-config-airbnb-base](https://npmjs.com/package/eslint-config-airbnb-base) config;
 * `/esm` - extends `/` config with ESM rules;
-* `/react` - extends `eslint-config-airbnb` config with hooks support and `jsx-runtime`;
+* `/react` - extends [eslint-config-airbnb](https://www.npmjs.com/package/eslint-config-airbnb) config with hooks support and `jsx-runtime`;
 * `/ava` - adds [eslint-plugin-ava](https://npmjs.com/package/eslint-plugin-ava) with recommemded rules. This config **does not** extend `/` config and must be used in conjunction with other configs;
 * `/typescript` - extends `/` config with recommended TypeScript ESlint rules;
 * `/typescript/esm` - extends `/typescript` config with ESM rules;
