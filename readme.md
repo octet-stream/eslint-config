@@ -53,57 +53,56 @@ Here's list of available configs:
 
 ## Rules
 
-This section contains the list of rules that I changed comparad to AirBnb config.
+This config overrides some of the rules from AitBnb config.
+This section contains a full list of the changed rules for each config.
 
-1. Avoid semicolon, until it's necessary: [`semi`](https://eslint.org/docs/rules/semi)
+### `/`
+
+This config extends [`eslint-config-airbnb-base`](https://npmjs.com/package/eslint-config-airbnb-base)
+
+#### [`semi`](https://eslint.org/docs/rules/semi)
+
+Avoid semicolon, until it's necessary.
+
+##### 👍 Do
 
 ```js
-// Good 👍
-
+const humber = 42
 const string = "On Soviet Moon landscape see binoculars through you!"
+const person = {
+  firstName: "Luke",
+  lastName: "Skywalker"
+}
+```
 
-const add = (a, b) => a + b
+##### 👎 Don't
 
-// The line starts from semicolon, because of array declaration
-;["SIGTERM", "SIGINT"].forEach(signal => process.on(signal, () => { process.exitCode = 0 }))
-
-// Bad 👎
-
+```js
 const number = 42;
+const string = "On Soviet Moon landscape see binoculars through you!"
 const person = {
   firstName: "Luke",
   lastName: "Skywalker"
 };
 ```
 
-2. Use double quotes by default. [`quotes`](https://eslint.org/docs/rules/quotes)
+#### [`semi-style`](https://eslint.org/docs/rules/semi-style)
+
+If semicolon is absolutely necessary, then place it at the beginning of line.
+
+##### 👍 Do
 
 ```js
-// Good 👍
+const add = (a, b) => a + b
 
-const firstString = "Just a string with double quotes."
-const secondString = "This string contains \"escaped quotes\" in it."
-const thirdString = 'This string also contains "quotes" in it.'
-const fourthString = `Use template literal only if you need ${interpolation}.`
-
-// Bad 👎
-
-const fifthString = 'Do not use signle quotes for strings.'
-const sixthString = `Do not use template literal without interpolation.`
+// The line starts from semicolon, because of array declaration
+;["SIGTERM", "SIGINT"].forEach(signal => process.on(signal, () => { process.exitCode = 0 }))
 ```
 
-3. Prefer `const` over `let` if assigned value is not meant to be changed. Avoid `var`. Use `const` in destructuring only if none of values are meant to be changed. [`prefer-const`](https://eslint.org/docs/rules/prefer-const)
+##### 👎 Don't
 
 ```js
-// Good 👍
+const add = (a, b) => a + b;
 
-const number = 42
-
-let string = "Initial string value"
-
-string = "Updated string value"
-
-// Bad 👎
-
-var someVariable = 451
+["SIGTERM", "SIGINT"].forEach(signal => process.on(signal, () => { process.exitCode = 0 }))
 ```
