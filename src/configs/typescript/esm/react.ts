@@ -2,7 +2,7 @@ import type {ESLint} from "eslint"
 
 export default {
   extends: [
-    "../react.js",
-    "../esm.js"
+    "../esm.js",
+    "../react.js"
   ]
 } satisfies ESLint.ConfigData

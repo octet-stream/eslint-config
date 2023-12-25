@@ -1,6 +1,6 @@
 import {fileURLToPath} from "node:url"
 
-import jsx from "dedent"
+import tsx from "dedent"
 import test from "ava"
 
 import {withAssertRules} from "../../__macros__/withAssertRules.js"
@@ -12,8 +12,15 @@ const configPath = fileURLToPath(
 test("Lints basic code example", withAssertRules, {
   configPath,
   filePath: "test.tsx",
-  code: jsx`
-    export const MyComponent = () => <div>Some text</div>\n
+  overrideConfig: {
+    rules: {
+      "import/no-extraneous-dependencies": "off"
+    }
+  },
+  code: tsx`
+    import type {FC} from "react"
+
+    export const HelloWorld: FC = () => <div>Hello, World!</div>\n
   `,
   assert: {
     errorCount: 0,
