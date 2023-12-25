@@ -4,62 +4,68 @@
   "description": "AirBnb-based ESlint config, tweaked for my needs.",
   "author": "Nick K.",
   "license": "MIT",
-  "main": "./base.js",
   "exports": {
-    ".": "./base.js",
-    "./react": "./react.js",
-    "./typescript": "./typescript/typescript.js",
-    "./typescript/react": "./typescript/react.js",
-    "./esm": "./esm/esm.js",
-    "./esm/react": "./esm/react.js",
-    "./esm/typescript": "./esm/typescript/typescript.js",
-    "./esm/typescript/react": "./esm/typescript/react.js",
-    "./package.json": "./package.json"
+    "./package.json": "./package.json",
+    ".": "./lib/configs/base.js",
+    "./ava": "./lib/configs/ava.js",
+    "./esm": "./lib/configs/esm.js",
+    "./esm/react": "./lib/configs/esm/react.js",
+    "./react": "./lib/configs/react.js",
+    "./typescript": "./lib/configs/typescript.js",
+    "./typescript/ava": "./lib/configs/typescript/ava.js",
+    "./typescript/esm": "./lib/configs/typescript/esm.js",
+    "./typescript/react": "./lib/configs/typescript/react.js",
+    "./typescript/esm/react": "./lib/configs/typescript/esm/react.js",
+    "./lib/rules": null
   },
+  "files": [
+    "lib"
+  ],
   "repository": "octet-stream/eslint-config",
-  "pnpm": {
-    "peerDependencyRules": {
-      "ignoreMissing": [
-        "@typescript-eslint/eslint-plugin",
-        "@typescript-eslint/parser",
-        "eslint-config-airbnb-typescript",
-        "eslint-import-resolver-typescript",
-        "eslint-plugin-jsx-a11y",
-        "eslint-plugin-react",
-        "eslint-plugin-react-hooks",
-        "eslint-config-airbnb",
-        "typescript"
-      ]
-    }
+  "scripts": {
+    "build": "unbuild",
+    "eslint": "eslint **/*.ts",
+    "postinstall": "npx is-in-ci || pnpm build",
+    "test": "pnpm build && cross-env NODE_OPTIONS=\"--no-warnings --import tsx\" ava",
+    "release": "pnpm run build && pnpm exec changeset publish",
+    "prepare": "npx is-in-ci || husky install"
   },
   "dependencies": {
-    "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-plugin-ava": "^14.0.0",
-    "eslint-plugin-import": "^2.27.5",
-    "eslint-plugin-promise": "^6.1.1"
+    "@typescript-eslint/eslint-plugin": "6.14.0",
+    "@typescript-eslint/parser": "6.14.0",
+    "eslint-config-airbnb": "19.0.4",
+    "eslint-config-airbnb-base": "15.0.0",
+    "eslint-config-airbnb-typescript": "17.1.0",
+    "eslint-import-resolver-typescript": "3.6.1",
+    "eslint-plugin-ava": "14.0.0",
+    "eslint-plugin-import": "2.29.1",
+    "eslint-plugin-jsx-a11y": "6.8.0",
+    "eslint-plugin-promise": "6.1.1",
+    "eslint-plugin-react": "7.33.2",
+    "eslint-plugin-react-hooks": "4.6.0"
   },
   "peerDependencies": {
-    "@typescript-eslint/eslint-plugin": "5.x",
-    "@typescript-eslint/parser": "5.x",
-    "eslint": ">= 3.32.x < 8.x || 8.x",
-    "eslint-config-airbnb": "19.x",
-    "eslint-config-airbnb-typescript": "17.x",
-    "eslint-import-resolver-typescript": "3.x",
-    "eslint-plugin-jsx-a11y": "^6.5.1",
-    "eslint-plugin-react": "^7.28.0",
-    "eslint-plugin-react-hooks": "^4.3.0",
-    "typescript": ">= 4.7.x < 5.x || 5.x"
+    "eslint": "8.x",
+    "typescript": "5.x"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.57.1",
-    "@typescript-eslint/parser": "^5.57.1",
-    "eslint": "^8.37.0",
-    "eslint-config-airbnb": "^19.0.4",
-    "eslint-config-airbnb-typescript": "^17.0.0",
-    "eslint-import-resolver-typescript": "^3.5.5",
-    "eslint-plugin-jsx-a11y": "^6.7.1",
-    "eslint-plugin-react": "^7.32.2",
-    "eslint-plugin-react-hooks": "^4.6.0",
-    "typescript": "^5.0.3"
+    "@changesets/changelog-github": "0.5.0",
+    "@changesets/cli": "2.27.1",
+    "@commitlint/cli": "18.4.3",
+    "@commitlint/config-conventional": "18.4.3",
+    "@commitlint/types": "18.4.3",
+    "@types/eslint": "8.44.9",
+    "@types/node": "20.10.4",
+    "ava": "6.0.1",
+    "cross-env": "7.0.3",
+    "dedent": "1.5.1",
+    "eslint": "8.56.0",
+    "husky": "8.0.0",
+    "lint-staged": "15.2.0",
+    "prop-types": "^15.8.1",
+    "react": "18.2.0",
+    "tsx": "4.6.2",
+    "typescript": "5.3.3",
+    "unbuild": "2.0.0"
   }
 }

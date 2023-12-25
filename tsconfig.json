@@ -1,0 +1,17 @@
+{
+  "include": ["**/*.ts"],
+  "compilerOptions": {
+    "target": "esnext",
+    "jsx": "preserve",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "baseUrl": ".",
+    "noEmit": true,
+    "removeComments": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "skipLibCheck": true
+  }
+}
