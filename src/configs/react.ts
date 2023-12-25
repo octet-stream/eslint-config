@@ -28,6 +28,7 @@ export default {
     // Allow multiple jsx expressions per line
     "react/jsx-one-expression-per-line": "off",
 
+    // Allow multiple spaces between props
     "react/jsx-props-no-multi-spaces": "off",
 
     // Allow object rest spread for props in jsx expressions
