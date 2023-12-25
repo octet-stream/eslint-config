@@ -354,7 +354,7 @@ console.log(await Promise.all(tasks))
 
 #### [`no-restricted-syntax`](https://eslint.org/docs/rules/no-restricted-syntax)
 
-This rule restricts the use of [with](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/with) statement.
+The use of [with](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/with) statement is discouraged.
 
 ### `/esm`
 
