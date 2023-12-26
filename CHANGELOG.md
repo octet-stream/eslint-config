@@ -1,5 +1,11 @@
 # @octetstream/eslint-config
 
+## 8.0.1
+
+### Patch Changes
+
+- [#12](https://github.com/octet-stream/eslint-config/pull/12) [`bd08b57`](https://github.com/octet-stream/eslint-config/commit/bd08b57fc53863ea48328a12193351977e23a10f) Thanks [@octet-stream](https://github.com/octet-stream)! - Move `build` script call from `postinstall` to `prepare`, because it breaks package's installation
+
 ## 8.0.0
 
 ### Major Changes
