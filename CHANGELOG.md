@@ -1,5 +1,11 @@
 # @octetstream/eslint-config
 
+## 8.0.2
+
+### Patch Changes
+
+- [#14](https://github.com/octet-stream/eslint-config/pull/14) [`9677ef4`](https://github.com/octet-stream/eslint-config/commit/9677ef46b4013e645488a47cb94ac621534d5062) Thanks [@octet-stream](https://github.com/octet-stream)! - Disable no-param-reassign, class-methods-use-this and no-void rules
+
 ## 8.0.1
 
 ### Patch Changes
