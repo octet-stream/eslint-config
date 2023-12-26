@@ -61,5 +61,14 @@ export default {
   "no-await-in-loop": "off",
 
   // Override this rules to allow `for...of` loops, because they're native and prohibit `WithStatement`
-  "no-restricted-syntax": ["error", "WithStatement"]
+  "no-restricted-syntax": ["error", "WithStatement"],
+
+  // Allow param reassign, sometimes it can be useful
+  "no-param-reassign": "off",
+
+  // Allow class methods w/o use of `this`
+  "class-methods-use-this": "off",
+
+  // Allow use of the `void` operator
+  "no-void": "off"
 } satisfies Partial<ESLintRules>
