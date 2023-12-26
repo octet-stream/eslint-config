@@ -385,3 +385,15 @@ import {something} from "./path/to/a/module"
 #### [`import/prefer-default-export`](https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/prefer-default-export.md)
 
 The use of default and named exports are not restricted.
+
+#### [`no-param-reassign`](https://eslint.org/docs/rules/no-param-reassign)
+
+Allow function params reassign.
+
+#### [`class-methods-use-this`](https://eslint.org/docs/rules/class-methods-use-this)
+
+Allow methods without use of `this`, because there are many cases when you don't need `this` inside of class instance methods.
+
+#### [`no-void`](https://eslint.org/docs/rules/no-void)
+
+Allow use of [`void`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void) operator.
