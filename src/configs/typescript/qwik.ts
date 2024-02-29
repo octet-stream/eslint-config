@@ -16,7 +16,7 @@ export default {
 
       "import/no-extraneous-dependencies": ["error", {
         devDependencies: [
-          "**/*.{test,spec,story}.{tsx,ts}",
+          "**/*.{test,spec,stories}.{tsx,ts}",
           "**/tests/**/*.tsx",
           "**/e2e/**/*.tsx"
         ]
