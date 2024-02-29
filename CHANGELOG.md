@@ -1,5 +1,11 @@
 # @octetstream/eslint-config
 
+## 8.2.3
+
+### Patch Changes
+
+- [`8457dec`](https://github.com/octet-stream/eslint-config/commit/8457dec85939bac21dbc6082d3409632b050b930) Thanks [@octet-stream](https://github.com/octet-stream)! - Add base import rules to qwik config
+
 ## 8.2.2
 
 ### Patch Changes
