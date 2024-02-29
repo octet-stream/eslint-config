@@ -1,36 +1,28 @@
 import type {ESLint} from "eslint"
 
-import tsRules from "../../rules/typescript.js"
 import createTsOverride from "../../overrides/typescript.js"
+
+import tsRules from "../../rules/typescript.js"
+import qwik from "../qwik"
 
 export default {
   extends: [
     "../base.js",
-    "../react.js",
+    "../qwik.js",
     "../typescript.js"
   ],
   overrides: [
-    createTsOverride("*.tsx", {
+    createTsOverride(["*.ts", "*.tsx"], {
       ...tsRules,
 
       "import/no-extraneous-dependencies": ["error", {
+        packageDir: qwik.rules["import/no-extraneous-dependencies"][1].packageDir,
         devDependencies: [
           "**/*.{test,spec,story}.{tsx,ts}",
           "**/tests/**/*.tsx",
           "**/e2e/**/*.tsx"
         ]
-      }],
-
-      // Disabled due to validation via TypeScript
-      "react/prop-types": "off",
-      "react/require-default-props": "off"
+      }]
     })
-  ],
-  rules: {
-    // Restrict JSX usage to `.jsx` and `.tsx` files only.
-    "react/jsx-filename-extension": ["error", {
-      extensions: [".jsx", ".tsx"]
-    }],
-    "import/extensions": "off"
-  }
+  ]
 } satisfies ESLint.ConfigData
