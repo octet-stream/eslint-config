@@ -4,7 +4,7 @@ const generatedDeps = ["@qwik-city-plan"]
 
 export default {
   extends: [
-    "plugin:qwik/recommemned",
+    "plugin:qwik/recommended",
     "./base.js"
   ],
   rules: {
