@@ -1,6 +1,6 @@
 import type {ESLint} from "eslint"
 
-const generatedDeps = ["@qwik-city-plan"]
+const generatedDeps = ["@qwik-city-plan", "@qwik-client-manifest"]
 
 export default {
   extends: [
