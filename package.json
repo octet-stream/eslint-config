@@ -11,11 +11,14 @@
     "./esm": "./lib/configs/esm.js",
     "./esm/react": "./lib/configs/esm/react.js",
     "./react": "./lib/configs/react.js",
+    "./qwik": "./lib/configs/qwik.js",
     "./typescript": "./lib/configs/typescript.js",
     "./typescript/ava": "./lib/configs/typescript/ava.js",
     "./typescript/esm": "./lib/configs/typescript/esm.js",
     "./typescript/react": "./lib/configs/typescript/react.js",
     "./typescript/esm/react": "./lib/configs/typescript/esm/react.js",
+    "./typescript/qwik": "./lib/configs/typescript/qwik.js",
+    "./typescript/esm/qwik": "./lib/configs/typescript/esm/qwik.js",
     "./lib/rules": null
   },
   "files": [
