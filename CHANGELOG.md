@@ -1,5 +1,11 @@
 # @octetstream/eslint-config
 
+## 8.2.1
+
+### Patch Changes
+
+- [`bd0c5c1`](https://github.com/octet-stream/eslint-config/commit/bd0c5c1d299571dfb865dc65e1bb9fe85a5b963f) Thanks [@octet-stream](https://github.com/octet-stream)! - Fix a typo in base qwik config
+
 ## 8.2.0
 
 ### Minor Changes
