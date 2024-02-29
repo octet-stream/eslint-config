@@ -1,6 +1,6 @@
 {
   "name": "@octetstream/eslint-config",
-  "version": "8.2.3",
+  "version": "8.2.4",
   "description": "AirBnb-based ESlint config, tweaked for my needs.",
   "author": "Nick K.",
   "license": "MIT",
