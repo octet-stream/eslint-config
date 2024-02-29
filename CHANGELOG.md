@@ -1,5 +1,11 @@
 # @octetstream/eslint-config
 
+## 8.1.0
+
+### Minor Changes
+
+- [#18](https://github.com/octet-stream/eslint-config/pull/18) [`c7d94b1`](https://github.com/octet-stream/eslint-config/commit/c7d94b1baeb84742d1decd9dfe6d6379a84e1e51) Thanks [@octet-stream](https://github.com/octet-stream)! - Fixes for `typescript` and `typescript/react` rules
+
 ## 8.0.2
 
 ### Patch Changes
