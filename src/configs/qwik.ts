@@ -1,5 +1,7 @@
 import type {ESLint} from "eslint"
 
+import importRules from "../rules/import"
+
 const generatedDeps = ["@qwik-city-plan", "@qwik-client-manifest"]
 
 export default {
@@ -8,6 +10,8 @@ export default {
     "./base.js"
   ],
   rules: {
+    ...importRules,
+
     "import/no-extraneous-dependencies": ["error", {
       devDependencies: [
         "**/*.{test,spec,story}.{jsx,js}",
