@@ -1,5 +1,11 @@
 # @octetstream/eslint-config
 
+## 8.2.0
+
+### Minor Changes
+
+- [#21](https://github.com/octet-stream/eslint-config/pull/21) [`d0abbfb`](https://github.com/octet-stream/eslint-config/commit/d0abbfbb09e5d7dcbe7be8ec08a2a93824dab37a) Thanks [@octet-stream](https://github.com/octet-stream)! - Add qwik configs
+
 ## 8.1.0
 
 ### Minor Changes
