@@ -3,7 +3,7 @@ import type {ESLint} from "eslint"
 export default {
   extends: [
     "../esm.js",
-    "../react.js"
+    "../qwik.js"
   ],
   rules: {
     // Prohibit `.ts`, `.tsx`, `.mts`, `.cts` and `.jsx` extensions.
