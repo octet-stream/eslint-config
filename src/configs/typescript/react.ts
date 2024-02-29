@@ -7,7 +7,6 @@ export default {
   extends: [
     "../base.js",
     "../react.js",
-    "../esm.js",
     "../typescript.js"
   ],
   overrides: [
@@ -31,6 +30,7 @@ export default {
     // Restrict JSX usage to `.jsx` and `.tsx` files only.
     "react/jsx-filename-extension": ["error", {
       extensions: [".jsx", ".tsx"]
-    }]
+    }],
+    "import/extensions": "off"
   }
 } satisfies ESLint.ConfigData
