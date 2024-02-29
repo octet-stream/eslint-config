@@ -9,10 +9,6 @@ export default {
   ],
   rules: {
     "import/no-extraneous-dependencies": ["error", {
-      packageDir: [
-        "@builder.io/qwik",
-        "@builder.io/qwik-city"
-      ],
       devDependencies: [
         "**/*.{test,spec,story}.{jsx,js}",
         "**/tests/**/*.jsx",
