@@ -1,5 +1,11 @@
 # @octetstream/eslint-config
 
+## 8.2.5
+
+### Patch Changes
+
+- [`e229d5e`](https://github.com/octet-stream/eslint-config/commit/e229d5ebb69dbc57efd7a03d72d1bdae631f5b08) Thanks [@octet-stream](https://github.com/octet-stream)! - Fix for import/no-extraneous-dependencies rule for qwik configs
+
 ## 8.2.4
 
 ### Patch Changes
