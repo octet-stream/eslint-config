@@ -18,7 +18,9 @@ export default {
         devDependencies: [
           "**/*.{test,spec,stories}.{tsx,ts}",
           "**/tests/**/*.tsx",
-          "**/e2e/**/*.tsx"
+          "**/e2e/**/*.tsx",
+          "*.config.{ts,cts,js,mjs}",
+          "*rc.{ts,cts,js,mjs}"
         ]
       }]
     })

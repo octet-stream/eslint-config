@@ -14,9 +14,11 @@ export default {
 
     "import/no-extraneous-dependencies": ["error", {
       devDependencies: [
-        "**/*.{test,spec,stories}.{jsx,js}",
+        "**/*.{test,spec,stories}.{jsx,js,mjs,cjs}",
         "**/tests/**/*.jsx",
-        "**/e2e/**/*.jsx"
+        "**/e2e/**/*.jsx",
+        "*.config.{js,mjs,cjs}",
+        "*rc.{js,mjs,cjs}"
       ]
     }],
     "import/no-unresolved": ["error", {
